@@ -1,0 +1,16 @@
+{
+  "Law": [
+    "legaltech", "LawFirm", "Law", "LegalAdvice",
+    "LegalAdviceUK", "LegalAdviceCanada", "Paralegal",
+    "LawSchool", "LegalNews"
+  ],
+  "Construction": [
+    "Construction", "Contractors", "HomeImprovement", "DIY",
+    "DIYChatRoom", "Electrical", "Plumbing", "HVAC", "AskEngineers"
+  ],
+  "Tech": [
+    "sysadmin", "msp", "talesfromtechsupport", "iiiiiiitttttttttttt",
+    "techsupportgore", "ITCareerQuestions", "netsec", "cybersecurity",
+    "technology", "tech", "gadgets", "apple", "linux"
+  ]
+}

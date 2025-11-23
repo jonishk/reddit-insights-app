@@ -1,0 +1,60 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+  <section class="panel">
+    <h1>Dashboard</h1>
+    <p class="muted">Overview of dataset and pipeline status.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Raw Data</h3>
+        <div id="raw-count">—</div>
+        <div id="raw-mod">—</div>
+      </div>
+      <div class="card">
+        <h3>Clean Data</h3>
+        <div id="clean-count">—</div>
+        <div id="clean-mod">—</div>
+      </div>
+      <div class="card">
+        <h3>Sentiment Data</h3>
+        <div id="sent-count">—</div>
+        <div id="sent-mod">—</div>
+      </div>
+      <div class="card">
+        <h3>Evaluation</h3>
+        <div id="eval-count">—</div>
+        <div id="eval-mod">—</div>
+      </div>
+    </div>
+
+    <h3>Recent Log Tail</h3>
+    <pre id="log-tail" class="logbox">Loading logs...</pre>
+
+    <div style="margin-top:18px;">
+      <button onclick="location.href='/pipeline'">Open Pipeline Tools</button>
+      <button onclick="location.href='/subreddits'">Edit Subreddits</button>
+      <button onclick="location.href='/chat'">Open Chatbot</button>
+    </div>
+  </section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  async function loadDashboard() {
+    const res = await fetch("/api/dashboard");
+    if (!res.ok) return;
+    const j = await res.json();
+    document.getElementById("raw-count").innerText = j.raw_rows;
+    document.getElementById("raw-mod").innerText = j.raw_exists ? ("Updated: " + (j.raw_rows ? "" : "")) : "No file";
+    document.getElementById("clean-count").innerText = j.clean_rows;
+    document.getElementById("sent-count").innerText = j.sent_rows;
+    document.getElementById("eval-count").innerText = j.eval_rows;
+
+    const tail = j.last_log_tail || [];
+    document.getElementById("log-tail").innerText = tail.join("");
+  }
+
+  window.addEventListener("load", loadDashboard);
+</script>
+{% endblock %}
