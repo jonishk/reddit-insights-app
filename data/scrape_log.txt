@@ -1,0 +1,237 @@
+[2025-11-01 17:53:40]  Starting Reddit data collection...
+[2025-11-01 17:53:40]  Fetching from r/legaltech (Category: Law)...
+[2025-11-01 17:54:04]  Fetched 1059 new records from r/legaltech
+[2025-11-01 17:54:12]  Fetching from r/LawFirm (Category: Law)...
+[2025-11-01 17:54:39]  Fetched 1039 new records from r/LawFirm
+[2025-11-01 17:54:47]  Fetching from r/Law (Category: Law)...
+[2025-11-01 17:55:34]  Fetched 975 new records from r/Law
+[2025-11-01 17:55:42]  Fetching from r/LegalAdvice (Category: Law)...
+[2025-11-01 17:56:02]  Fetched 473 new records from r/LegalAdvice
+[2025-11-01 17:56:10]  Fetching from r/LegalAdviceUK (Category: Law)...
+[2025-11-01 17:56:36]  Fetched 830 new records from r/LegalAdviceUK
+[2025-11-01 17:56:44]  Fetching from r/LegalAdviceCanada (Category: Law)...
+[2025-11-01 17:57:09]  Fetched 942 new records from r/LegalAdviceCanada
+[2025-11-01 17:57:17]  Fetching from r/Paralegal (Category: Law)...
+[2025-11-01 17:57:41]  Fetched 857 new records from r/Paralegal
+[2025-11-01 17:57:49]  Fetching from r/LawSchool (Category: Law)...
+[2025-11-01 17:58:12]  Fetched 835 new records from r/LawSchool
+[2025-11-01 17:58:20]  Fetching from r/LegalNews (Category: Law)...
+[2025-11-01 17:59:08]  Fetched 772 new records from r/LegalNews
+[2025-11-01 17:59:16]  Fetching from r/Construction (Category: Construction)...
+[2025-11-01 18:00:08]  Fetched 856 new records from r/Construction
+[2025-11-01 18:00:16]  Fetching from r/Contractors (Category: Construction)...
+[2025-11-01 18:00:17]  Fetched 0 new records from r/Contractors
+[2025-11-01 18:00:25]  Fetching from r/HomeImprovement (Category: Construction)...
+[2025-11-01 18:01:10]  Fetched 455 new records from r/HomeImprovement
+[2025-11-01 18:01:18]  Fetching from r/DIY (Category: Construction)...
+[2025-11-01 18:02:10]  Fetched 910 new records from r/DIY
+[2025-11-01 18:02:18]  Fetching from r/DIYChatRoom (Category: Construction)...
+[2025-11-01 18:02:18]  Skipping r/DIYChatRoom due to error: Redirect to /subreddits/search
+[2025-11-01 18:02:26]  Fetching from r/Electrical (Category: Construction)...
+[2025-11-01 18:03:11]  Fetched 675 new records from r/Electrical
+[2025-11-01 18:03:19]  Fetching from r/Plumbing (Category: Construction)...
+[2025-11-01 18:04:11]  Fetched 467 new records from r/Plumbing
+[2025-11-01 18:04:19]  Fetching from r/HVAC (Category: Construction)...
+[2025-11-01 18:05:12]  Fetched 957 new records from r/HVAC
+[2025-11-01 18:05:20]  Fetching from r/AskEngineers (Category: Construction)...
+[2025-11-01 18:06:13]  Fetched 1052 new records from r/AskEngineers
+[2025-11-01 18:06:21]  Fetching from r/sysadmin (Category: Tech)...
+[2025-11-01 18:07:13]  Fetched 940 new records from r/sysadmin
+[2025-11-01 18:07:21]  Fetching from r/msp (Category: Tech)...
+[2025-11-01 18:08:15]  Fetched 1160 new records from r/msp
+[2025-11-01 18:08:23]  Fetching from r/talesfromtechsupport (Category: Tech)...
+[2025-11-01 18:08:37]  Fetched 439 new records from r/talesfromtechsupport
+[2025-11-01 18:08:45]  Fetching from r/iiiiiiitttttttttttt (Category: Tech)...
+[2025-11-01 18:09:21]  Fetched 1127 new records from r/iiiiiiitttttttttttt
+[2025-11-01 18:09:29]  Fetching from r/techsupportgore (Category: Tech)...
+[2025-11-01 18:09:43]  Fetched 469 new records from r/techsupportgore
+[2025-11-01 18:09:51]  Fetching from r/ITCareerQuestions (Category: Tech)...
+[2025-11-01 18:10:42]  Fetched 1040 new records from r/ITCareerQuestions
+[2025-11-01 18:10:50]  Fetching from r/netsec (Category: Tech)...
+[2025-11-01 18:11:26]  Fetched 277 new records from r/netsec
+[2025-11-01 18:11:34]  Fetching from r/cybersecurity (Category: Tech)...
+[2025-11-01 18:12:27]  Fetched 591 new records from r/cybersecurity
+[2025-11-01 18:12:35]  Fetching from r/technology (Category: Tech)...
+[2025-11-01 18:13:31]  Fetched 1029 new records from r/technology
+[2025-11-01 18:13:39]  Fetching from r/tech (Category: Tech)...
+[2025-11-01 18:13:58]  Fetched 547 new records from r/tech
+[2025-11-01 18:14:06]  Fetching from r/gadgets (Category: Tech)...
+[2025-11-01 18:15:18]  Fetched 1426 new records from r/gadgets
+[2025-11-01 18:15:26]  Fetching from r/apple (Category: Tech)...
+[2025-11-01 18:16:38]  Fetched 1432 new records from r/apple
+[2025-11-01 18:16:46]  Fetching from r/linux (Category: Tech)...
+[2025-11-01 18:17:23]  Fetched 1038 new records from r/linux
+[2025-11-01 18:17:32]  Saved updated dataset to data\reddit_data.csv — total 82165 records.
+[2025-11-01 18:17:32]  New rows added: 24669
+[2025-11-01 18:17:32]  Data collection completed successfully!
+[2025-11-08 17:04:19] Starting Reddit data collection with duplicate prevention...
+[2025-11-08 17:04:19] Fetching from r/legaltech (Category: Law) [Attempt 1]
+[2025-11-08 17:04:27] Retrieved 182 new records from r/legaltech.
+[2025-11-08 17:04:35] Fetching from r/LawFirm (Category: Law) [Attempt 1]
+[2025-11-08 17:04:47] Retrieved 377 new records from r/LawFirm.
+[2025-11-08 17:04:55] Fetching from r/Law (Category: Law) [Attempt 1]
+[2025-11-08 17:05:51] Retrieved 1053 new records from r/Law.
+[2025-11-08 17:05:59] Fetching from r/LegalAdvice (Category: Law) [Attempt 1]
+[2025-11-08 17:06:20] Retrieved 456 new records from r/LegalAdvice.
+[2025-11-08 17:06:28] Fetching from r/LegalAdviceUK (Category: Law) [Attempt 1]
+[2025-11-08 17:06:55] Retrieved 837 new records from r/LegalAdviceUK.
+[2025-11-08 17:07:03] Fetching from r/LegalAdviceCanada (Category: Law) [Attempt 1]
+[2025-11-08 17:07:30] Retrieved 890 new records from r/LegalAdviceCanada.
+[2025-11-08 17:07:38] Fetching from r/Paralegal (Category: Law) [Attempt 1]
+[2025-11-08 17:08:04] Retrieved 782 new records from r/Paralegal.
+[2025-11-08 17:08:12] Fetching from r/LawSchool (Category: Law) [Attempt 1]
+[2025-11-08 17:08:38] Retrieved 851 new records from r/LawSchool.
+[2025-11-08 17:08:46] Fetching from r/LegalNews (Category: Law) [Attempt 1]
+[2025-11-08 17:09:23] Retrieved 699 new records from r/LegalNews.
+[2025-11-08 17:09:31] Fetching from r/Construction (Category: Construction) [Attempt 1]
+[2025-11-08 17:10:07] Retrieved 905 new records from r/Construction.
+[2025-11-08 17:10:16] Fetching from r/Contractors (Category: Construction) [Attempt 1]
+[2025-11-08 17:10:16]  No new posts found for r/Contractors.
+[2025-11-08 17:10:24] Fetching from r/HomeImprovement (Category: Construction) [Attempt 1]
+[2025-11-08 17:11:08] Retrieved 476 new records from r/HomeImprovement.
+[2025-11-08 17:11:16] Fetching from r/DIY (Category: Construction) [Attempt 1]
+[2025-11-08 17:12:08] Retrieved 852 new records from r/DIY.
+[2025-11-08 17:12:16] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 1]
+[2025-11-08 17:12:16] Attempt 1 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:12:26] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 2]
+[2025-11-08 17:12:27] Attempt 2 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:12:37] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 3]
+[2025-11-08 17:12:37] Attempt 3 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:12:47] Skipping r/DIYChatRoom after 3 failed attempts.
+[2025-11-08 17:12:47] Fetching from r/Electrical (Category: Construction) [Attempt 1]
+[2025-11-08 17:13:15] Retrieved 685 new records from r/Electrical.
+[2025-11-08 17:13:23] Fetching from r/Plumbing (Category: Construction) [Attempt 1]
+[2025-11-08 17:14:11] Retrieved 545 new records from r/Plumbing.
+[2025-11-08 17:14:19] Fetching from r/HVAC (Category: Construction) [Attempt 1]
+[2025-11-08 17:15:13] Retrieved 1254 new records from r/HVAC.
+[2025-11-08 17:15:21] Fetching from r/AskEngineers (Category: Construction) [Attempt 1]
+[2025-11-08 17:15:45] Retrieved 450 new records from r/AskEngineers.
+[2025-11-08 17:15:53] Fetching from r/sysadmin (Category: Tech) [Attempt 1]
+[2025-11-08 17:16:47] Retrieved 961 new records from r/sysadmin.
+[2025-11-08 17:16:55] Fetching from r/msp (Category: Tech) [Attempt 1]
+[2025-11-08 17:17:47] Retrieved 1044 new records from r/msp.
+[2025-11-08 17:17:55] Fetching from r/talesfromtechsupport (Category: Tech) [Attempt 1]
+[2025-11-08 17:18:01] Retrieved 112 new records from r/talesfromtechsupport.
+[2025-11-08 17:18:09] Fetching from r/iiiiiiitttttttttttt (Category: Tech) [Attempt 1]
+[2025-11-08 17:18:22] Retrieved 309 new records from r/iiiiiiitttttttttttt.
+[2025-11-08 17:18:30] Fetching from r/techsupportgore (Category: Tech) [Attempt 1]
+[2025-11-08 17:18:36] Retrieved 142 new records from r/techsupportgore.
+[2025-11-08 17:18:44] Fetching from r/ITCareerQuestions (Category: Tech) [Attempt 1]
+[2025-11-08 17:19:21] Retrieved 1013 new records from r/ITCareerQuestions.
+[2025-11-08 17:19:29] Fetching from r/netsec (Category: Tech) [Attempt 1]
+[2025-11-08 17:19:34] Retrieved 47 new records from r/netsec.
+[2025-11-08 17:19:42] Fetching from r/cybersecurity (Category: Tech) [Attempt 1]
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:19:59]  Error fetching comments for r/cybersecurity: received 429 HTTP response
+[2025-11-08 17:20:24] Retrieved 598 new records from r/cybersecurity.
+[2025-11-08 17:20:32] Fetching from r/technology (Category: Tech) [Attempt 1]
+[2025-11-08 17:21:41] Retrieved 1118 new records from r/technology.
+[2025-11-08 17:21:49] Fetching from r/tech (Category: Tech) [Attempt 1]
+[2025-11-08 17:21:57] Retrieved 181 new records from r/tech.
+[2025-11-08 17:22:05] Fetching from r/gadgets (Category: Tech) [Attempt 1]
+[2025-11-08 17:22:26] Retrieved 419 new records from r/gadgets.
+[2025-11-08 17:22:34] Fetching from r/apple (Category: Tech) [Attempt 1]
+[2025-11-08 17:23:27] Retrieved 726 new records from r/apple.
+[2025-11-08 17:23:35] Fetching from r/linux (Category: Tech) [Attempt 1]
+[2025-11-08 17:24:19] Retrieved 988 new records from r/linux.
+[2025-11-08 17:24:30] Data saved: 18952 new rows added. Total: 101117 records.
+[2025-11-08 17:24:30] Data collection completed successfully!
+[2025-11-08 17:28:25] Starting Reddit data collection with duplicate prevention...
+[2025-11-08 17:28:25] Fetching from r/legaltech (Category: Law) [Attempt 1]
+[2025-11-08 17:28:27] No new posts found for r/legaltech.
+[2025-11-08 17:28:35] Fetching from r/LawFirm (Category: Law) [Attempt 1]
+[2025-11-08 17:28:36] No new posts found for r/LawFirm.
+[2025-11-08 17:28:44] Fetching from r/Law (Category: Law) [Attempt 1]
+[2025-11-08 17:28:45] No new posts found for r/Law.
+[2025-11-08 17:28:53] Fetching from r/LegalAdvice (Category: Law) [Attempt 1]
+[2025-11-08 17:28:55] Retrieved 5 new records from r/LegalAdvice.
+[2025-11-08 17:29:03] Fetching from r/LegalAdviceUK (Category: Law) [Attempt 1]
+[2025-11-08 17:29:05] Retrieved 3 new records from r/LegalAdviceUK.
+[2025-11-08 17:29:13] Fetching from r/LegalAdviceCanada (Category: Law) [Attempt 1]
+[2025-11-08 17:29:14] No new posts found for r/LegalAdviceCanada.
+[2025-11-08 17:29:22] Fetching from r/Paralegal (Category: Law) [Attempt 1]
+[2025-11-08 17:29:23] No new posts found for r/Paralegal.
+[2025-11-08 17:29:31] Fetching from r/LawSchool (Category: Law) [Attempt 1]
+[2025-11-08 17:29:33] Retrieved 2 new records from r/LawSchool.
+[2025-11-08 17:29:41] Fetching from r/LegalNews (Category: Law) [Attempt 1]
+[2025-11-08 17:29:42] No new posts found for r/LegalNews.
+[2025-11-08 17:29:50] Fetching from r/Construction (Category: Construction) [Attempt 1]
+[2025-11-08 17:29:53] No new posts found for r/Construction.
+[2025-11-08 17:30:01] Fetching from r/Contractors (Category: Construction) [Attempt 1]
+[2025-11-08 17:30:01] No new posts found for r/Contractors.
+[2025-11-08 17:30:09] Fetching from r/HomeImprovement (Category: Construction) [Attempt 1]
+[2025-11-08 17:30:10] Retrieved 3 new records from r/HomeImprovement.
+[2025-11-08 17:30:18] Fetching from r/DIY (Category: Construction) [Attempt 1]
+[2025-11-08 17:30:20] No new posts found for r/DIY.
+[2025-11-08 17:30:28] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 1]
+[2025-11-08 17:30:28] Attempt 1 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:30:38] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 2]
+[2025-11-08 17:30:38] Attempt 2 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:30:48] Fetching from r/DIYChatRoom (Category: Construction) [Attempt 3]
+[2025-11-08 17:30:48] Attempt 3 failed for r/DIYChatRoom: Redirect to /subreddits/search
+[2025-11-08 17:30:58] Skipping r/DIYChatRoom after 3 failed attempts.
+[2025-11-08 17:30:58] Fetching from r/Electrical (Category: Construction) [Attempt 1]
+[2025-11-08 17:31:01] Retrieved 3 new records from r/Electrical.
+[2025-11-08 17:31:09] Fetching from r/Plumbing (Category: Construction) [Attempt 1]
+[2025-11-08 17:31:11] Retrieved 1 new records from r/Plumbing.
+[2025-11-08 17:31:19] Fetching from r/HVAC (Category: Construction) [Attempt 1]
+[2025-11-08 17:31:21] Retrieved 1 new records from r/HVAC.
+[2025-11-08 17:31:29] Fetching from r/AskEngineers (Category: Construction) [Attempt 1]
+[2025-11-08 17:31:30] No new posts found for r/AskEngineers.
+[2025-11-08 17:31:38] Fetching from r/sysadmin (Category: Tech) [Attempt 1]
+[2025-11-08 17:31:39] No new posts found for r/sysadmin.
+[2025-11-08 17:31:47] Fetching from r/msp (Category: Tech) [Attempt 1]
+[2025-11-08 17:31:48] No new posts found for r/msp.
+[2025-11-08 17:31:56] Fetching from r/talesfromtechsupport (Category: Tech) [Attempt 1]
+[2025-11-08 17:31:57] No new posts found for r/talesfromtechsupport.
+[2025-11-08 17:32:05] Fetching from r/iiiiiiitttttttttttt (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:07] No new posts found for r/iiiiiiitttttttttttt.
+[2025-11-08 17:32:15] Fetching from r/techsupportgore (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:16] No new posts found for r/techsupportgore.
+[2025-11-08 17:32:24] Fetching from r/ITCareerQuestions (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:25] No new posts found for r/ITCareerQuestions.
+[2025-11-08 17:32:33] Fetching from r/netsec (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:34] No new posts found for r/netsec.
+[2025-11-08 17:32:42] Fetching from r/cybersecurity (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:43] No new posts found for r/cybersecurity.
+[2025-11-08 17:32:52] Fetching from r/technology (Category: Tech) [Attempt 1]
+[2025-11-08 17:32:53] No new posts found for r/technology.
+[2025-11-08 17:33:01] Fetching from r/tech (Category: Tech) [Attempt 1]
+[2025-11-08 17:33:02] No new posts found for r/tech.
+[2025-11-08 17:33:10] Fetching from r/gadgets (Category: Tech) [Attempt 1]
+[2025-11-08 17:33:11] No new posts found for r/gadgets.
+[2025-11-08 17:33:19] Fetching from r/apple (Category: Tech) [Attempt 1]
+[2025-11-08 17:33:20] No new posts found for r/apple.
+[2025-11-08 17:33:28] Fetching from r/linux (Category: Tech) [Attempt 1]
+[2025-11-08 17:33:30] No new posts found for r/linux.
+[2025-11-08 17:33:40] Data saved: 18 new rows added. Total: 101135 records.
+[2025-11-08 17:33:40] Data collection completed successfully!
+[2025-11-08 18:09:19] Starting Reddit data collection with duplicate prevention...
+[2025-11-08 18:09:19] Fetching from r/legaltech (Category: Law) [Attempt 1]
+[2025-11-08 18:09:21] No new posts found for r/legaltech.
+[2025-11-08 18:34:14] Starting Reddit data collection with duplicate prevention...
+[2025-11-08 18:34:14] Fetching from r/legaltech (Category: Law) [Attempt 1]
+[2025-11-21 01:09:31] Starting Reddit data collection with duplicate prevention...
+[2025-11-21 01:09:31] Fetching from r/legaltech (Category: Law) [Attempt 1]
+[2025-11-21 01:09:42] Retrieved 336 new records from r/legaltech.
+[2025-11-21 01:09:50] Fetching from r/LawFirm (Category: Law) [Attempt 1]
+[2025-11-21 01:10:25] Retrieved 738 new records from r/LawFirm.
+[2025-11-21 01:10:33] Fetching from r/Law (Category: Law) [Attempt 1]
+[2025-11-21 01:11:26] Retrieved 988 new records from r/Law.
+[2025-11-21 01:11:34] Fetching from r/LegalAdvice (Category: Law) [Attempt 1]
+[2025-11-21 01:12:26] Retrieved 414 new records from r/LegalAdvice.
+[2025-11-21 01:12:34] Fetching from r/LegalAdviceUK (Category: Law) [Attempt 1]
+[2025-11-21 01:13:27] Retrieved 710 new records from r/LegalAdviceUK.
+[2025-11-21 01:13:35] Fetching from r/LegalAdviceCanada (Category: Law) [Attempt 1]
+[2025-11-21 01:14:28] Retrieved 908 new records from r/LegalAdviceCanada.
+[2025-11-21 01:14:36] Fetching from r/Paralegal (Category: Law) [Attempt 1]
+[2025-11-21 01:15:28] Retrieved 958 new records from r/Paralegal.
+[2025-11-21 01:15:36] Fetching from r/LawSchool (Category: Law) [Attempt 1]
+[2025-11-21 01:16:28] Retrieved 812 new records from r/LawSchool.
+[2025-11-21 01:16:36] Fetching from r/LegalNews (Category: Law) [Attempt 1]
+[2025-11-21 01:17:30] Retrieved 744 new records from r/LegalNews.
+[2025-11-21 01:17:38] Fetching from r/Construction (Category: Construction) [Attempt 1]

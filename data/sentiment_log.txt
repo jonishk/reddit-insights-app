@@ -1,0 +1,26 @@
+[2025-11-08 17:34:06] Loading NLTK components...
+[2025-11-08 17:34:07] Loaded cleaned dataset with 2591 rows.
+[2025-11-08 17:34:14] Saved sentiment dataset with 2591 rows to data\reddit_data_sentiment.csv.
+[2025-11-08 17:34:14] Sentiment distribution:
+sentiment
+positive    1736
+negative     512
+neutral      343
+[2025-11-08 17:34:14] Top negative keywords:
+   word  count
+  linux    408
+windows    223
+    use    172
+   dont    160
+     im    134
+   like    125
+    get    123
+   time    121
+   work    119
+    one    118
+  would    106
+   need     97
+   even     97
+  using     93
+ people     89
+[2025-11-08 17:34:14] Sentiment analysis completed successfully.

@@ -1,0 +1,30 @@
+[2025-11-08 17:24:32] Loaded dataset with 101136 rows.
+[2025-11-08 17:24:51] Cleaned dataset saved with 2592 rows to data\reddit_data_clean.csv.
+[2025-11-08 17:24:51] Top keywords found:
+keywords_found
+linux               1405
+azure                291
+firewall             223
+clio                 209
+aws                  193
+westlaw               61
+active directory      59
+docker                48
+jira                  42
+filevine              42
+[2025-11-08 17:24:51] Data cleaning completed successfully.
+[2025-11-08 17:33:43] Loaded dataset with 101135 rows.
+[2025-11-08 17:34:03] Cleaned dataset saved with 2591 rows to data\reddit_data_clean.csv.
+[2025-11-08 17:34:03] Top keywords found:
+keywords_found
+linux               1405
+azure                291
+firewall             223
+clio                 209
+aws                  193
+westlaw               61
+active directory      59
+docker                48
+jira                  42
+filevine              42
+[2025-11-08 17:34:03] Data cleaning completed successfully.
