@@ -43,21 +43,24 @@ CONFIG_PATH = "config/subreddits.json"
 
 
 # ----------------------------------------
-# RAG SETUP (Switched to OpenAI Embeddings)
+# RAG SETUP (1536-dim OpenAI Embeddings)
 # ----------------------------------------
-embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+embeddings = OpenAIEmbeddings(model="text-embedding-3-small")  # 1536 dims
 
 index_name = "reddit-insights"
+
+docsearch = None
+retriever = None
 
 try:
     pc = Pinecone(api_key=PINECONE_API_KEY)
     existing_indexes = [i["name"] for i in pc.list_indexes()]
 
     if index_name not in existing_indexes:
-        print("Creating Pinecone index...")
+        print("Creating Pinecone index (1536 dims)...")
         pc.create_index(
             name=index_name,
-            dimension=1536,   # OpenAI embedding dimension
+            dimension=1536,
             metric="cosine",
             spec=ServerlessSpec(cloud="aws", region="us-east-1")
         )
@@ -70,11 +73,11 @@ try:
         embedding=embeddings
     )
 
+    retriever = docsearch.as_retriever(search_kwargs={"k": 10})
+
 except Exception as e:
     print("Could not connect to Pinecone:", e)
     docsearch = None
-
-retriever = docsearch.as_retriever(search_kwargs={"k": 10}) if docsearch else None
 
 
 # ----------------------------------------
@@ -96,7 +99,6 @@ prompt = ChatPromptTemplate.from_messages([
 ])
 
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
-rag_chain = create_retrieval_chain(retriever, question_answer_chain) if retriever else None
 
 
 # ----------------------------------------
@@ -192,7 +194,7 @@ def api_save_subs():
 
 
 # ----------------------------------------
-# CHATBOT ENDPOINT
+# CHATBOT ENDPOINT (SAFE retriever refresh)
 # ----------------------------------------
 @app.route("/get", methods=["POST"])
 def chat():
@@ -201,7 +203,10 @@ def chat():
     if not docsearch:
         return "Index missing — run indexing first."
 
-    # Simple category filter
+    # Always refresh retriever to avoid stale vector dimension cache
+    retriever = docsearch.as_retriever(search_kwargs={"k": 10})
+
+    # Category filter
     text = msg.lower()
     if "construction" in text:
         search_filter = {"category": "Construction"}
@@ -212,8 +217,12 @@ def chat():
     else:
         search_filter = None
 
-    retrieved = docsearch.similarity_search_with_score(msg, k=10, filter=search_filter)
-    docs = [doc for doc, score in retrieved if doc.page_content.strip()]
+    retrieved_docs = retriever.get_relevant_documents(msg)
+
+    docs = [
+        doc for doc in retrieved_docs
+        if doc.page_content and doc.page_content.strip()
+    ]
 
     if not docs:
         return "I don’t know based on the provided Reddit data."
