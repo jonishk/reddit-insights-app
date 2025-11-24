@@ -1,60 +1,55 @@
-<!-- templates/dashboard.html -->
-{% extends "base.html" %}
-{% block content %}
-  <section class="panel">
-    <h1>Dashboard</h1>
-    <p class="muted">Overview of dataset and pipeline status.</p>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Raw Data</h3>
-        <div id="raw-count">—</div>
-        <div id="raw-mod">—</div>
-      </div>
-      <div class="card">
-        <h3>Clean Data</h3>
-        <div id="clean-count">—</div>
-        <div id="clean-mod">—</div>
-      </div>
-      <div class="card">
-        <h3>Sentiment Data</h3>
-        <div id="sent-count">—</div>
-        <div id="sent-mod">—</div>
-      </div>
-      <div class="card">
-        <h3>Evaluation</h3>
-        <div id="eval-count">—</div>
-        <div id="eval-mod">—</div>
-      </div>
+<!-- render_app/templates/dashboard.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Reddit Insights — Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="topnav">
+    <div class="brand">Reddit Insights</div>
+    <div class="navlinks">
+      <a href="/chat">Chatbot</a>
     </div>
+  </div>
 
-    <h3>Recent Log Tail</h3>
-    <pre id="log-tail" class="logbox">Loading logs...</pre>
+  <main class="main-container">
+    <section class="panel">
+      <h2>Pinecone Index Status</h2>
+      <p class="muted">This dashboard reads index stats directly from Pinecone. The local pipeline uploads embeddings and updates the index.</p>
 
-    <div style="margin-top:18px;">
-      <button onclick="location.href='/pipeline'">Open Pipeline Tools</button>
-      <button onclick="location.href='/subreddits'">Edit Subreddits</button>
-      <button onclick="location.href='/chat'">Open Chatbot</button>
-    </div>
-  </section>
-{% endblock %}
+      <div id="stats" class="card">
+        <p>Loading index statistics...</p>
+      </div>
 
-{% block scripts %}
-<script>
-  async function loadDashboard() {
-    const res = await fetch("/api/dashboard");
-    if (!res.ok) return;
-    const j = await res.json();
-    document.getElementById("raw-count").innerText = j.raw_rows;
-    document.getElementById("raw-mod").innerText = j.raw_exists ? ("Updated: " + (j.raw_rows ? "" : "")) : "No file";
-    document.getElementById("clean-count").innerText = j.clean_rows;
-    document.getElementById("sent-count").innerText = j.sent_rows;
-    document.getElementById("eval-count").innerText = j.eval_rows;
+      <div id="raw" class="card" style="margin-top:12px;"></div>
+    </section>
+  </main>
 
-    const tail = j.last_log_tail || [];
-    document.getElementById("log-tail").innerText = tail.join("");
-  }
-
-  window.addEventListener("load", loadDashboard);
-</script>
-{% endblock %}
+  <script>
+    async function loadStats(){
+      const r = await fetch('/api/pinecone_stats');
+      const j = await r.json();
+      const c = document.getElementById('stats');
+      if (j.error) {
+        c.innerHTML = `<p style="color:darkred">${j.error}</p>`;
+        return;
+      }
+      if (!j.index_exists) {
+        c.innerHTML = `<p>Index not found. Local pipeline must create & upload embeddings.</p>`;
+        return;
+      }
+      c.innerHTML = `
+        <p><strong>Total vectors:</strong> ${j.total_vectors ?? 'unknown'}</p>
+        <p><strong>Dimension:</strong> ${j.dimension}</p>
+        <p><strong>Metric:</strong> ${j.metric}</p>
+        <p><strong>Namespaces:</strong> ${j.namespaces.join(', ') || 'default'}</p>
+      `;
+      const raw = document.getElementById('raw');
+      raw.innerHTML = `<pre style="white-space:pre-wrap; max-height:200px; overflow:auto;">${JSON.stringify(j.raw_stats, null, 2)}</pre>`;
+    }
+    loadStats();
+  </script>
+</body>
+</html>
