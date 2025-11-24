@@ -1,142 +1,41 @@
-<!-- templates/chatbot.html -->
-{% extends "base.html" %}
-{% block content %}
-<section class="panel">
-  <h1>Chatbot</h1>
-  <p class="muted">Ask questions about tools and pain points. Answers are retrieved from indexed Reddit excerpts.</p>
-
-  <div class="chat-container">
-    <div class="chat-window" id="chat-window">
-      <div class="message bot-message">
-        <div class="message-text">Hey there 👋 How can I help?</div>
-      </div>
+<!-- render_app/templates/chatbot.html -->
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Reddit Insights — Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="topnav">
+    <div class="brand">Reddit Insights</div>
+    <div class="navlinks">
+      <a href="/">Dashboard</a>
     </div>
-
-    <form id="chat-form" onsubmit="return sendMessage(event)" class="chat-form">
-      <textarea id="chat-input" class="message-input" placeholder="Type your question..." required></textarea>
-      <div class="chat-controls">
-        <button type="submit" id="send-message" class="send-btn">Send</button>
-      </div>
-    </form>
   </div>
-</section>
-{% endblock %}
 
-{% block scripts %}
-<script>
-// Elements (must match your HTML IDs)
-const chatWindow = document.getElementById("chat-window");
-const chatForm = document.getElementById("chat-form");
-const chatInput = document.getElementById("chat-input");
-const sendButton = document.getElementById("send-message");
+  <main class="main-container">
+    <section class="panel">
+      <h2>Chatbot</h2>
+      <p class="muted">Ask questions about tools and user pain points. The chatbot answers based on indexed Reddit excerpts.</p>
 
-// Safety checks
-if (!chatForm || !chatInput || !chatWindow) {
-  console.error("Chat elements not found - check IDs (chat-form, chat-input, chat-window).");
-}
+      <div class="chat-container">
+        <div class="chat-window" id="chat-window">
+          <div class="message bot-message">
+            <div class="message-text">Hey there 👋 How can I help?</div>
+          </div>
+        </div>
 
-// Simple HTML escaper
-function escapeHtml(text) {
-  if (!text) return "";
-  return text.replace(/[&<>"']/g, function (m) {
-    return ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" })[m];
-  });
-}
+        <form id="chat-form" class="chat-form" onsubmit="return sendMessage(event)">
+          <textarea id="chat-input" class="message-input" placeholder="Type your question... (Enter = send, Shift+Enter = newline)" required></textarea>
+          <div class="chat-controls">
+            <button type="submit" id="send-message" class="send-btn">Send</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
 
-// Append message to chat window
-function appendMessage(content, className = "message user-message") {
-  const div = document.createElement("div");
-  div.className = className;
-  div.innerHTML = `<div class="message-text">${content}</div>`;
-  chatWindow.appendChild(div);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-}
-
-// Show thinking indicator (returns element so caller can remove it)
-function showThinking() {
-  const thinkingHtml = `<div class="thinking-indicator"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
-  appendMessage(thinkingHtml, "message bot-message thinking");
-  return document.querySelector(".message.bot-message.thinking");
-}
-
-// Main send logic (handles form submit)
-async function handleSubmit(e) {
-  // e may be undefined if called programmatically; normalize it
-  if (e && typeof e.preventDefault === "function") e.preventDefault();
-
-  const text = (chatInput.value || "").trim();
-  if (!text) return false;
-
-  // Add user message
-  appendMessage(escapeHtml(text), "message user-message");
-  chatInput.value = "";
-  chatInput.style.height = ""; // reset height if auto-resize used
-
-  // Show thinking
-  showThinking();
-
-  try {
-    const form = new URLSearchParams();
-    form.append("msg", text);
-
-    const res = await fetch("/get", { method: "POST", body: form });
-    const reply = await res.text();
-
-    // Remove thinking
-    const thinking = document.querySelector(".message.bot-message.thinking");
-    if (thinking) thinking.remove();
-
-    appendMessage(escapeHtml(reply), "message bot-message");
-  } catch (err) {
-    const thinking = document.querySelector(".message.bot-message.thinking");
-    if (thinking) thinking.remove();
-
-    appendMessage("Error: unable to get response.", "message bot-message");
-    console.error(err);
-  }
-
-  return false;
-}
-
-// Attach submit handler (preferred to inline onsubmit)
-if (chatForm) {
-  // Remove any inline onsubmit to avoid double-calls (defensive)
-  try {
-    chatForm.onsubmit = null;
-  } catch (_) {}
-
-  chatForm.addEventListener("submit", handleSubmit);
-}
-
-// Helper: send on Enter (but allow Shift+Enter for newline)
-if (chatInput) {
-  chatInput.addEventListener("keydown", function (e) {
-    // If Enter pressed without Shift -> send
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-
-      // Prefer the modern requestSubmit to trigger the form submit handlers
-      if (typeof chatForm.requestSubmit === "function") {
-        chatForm.requestSubmit(); // triggers 'submit' event and our handler
-      } else {
-        // Fallback for older browsers
-        const fakeEvent = new Event("submit", { cancelable: true });
-        chatForm.dispatchEvent(fakeEvent);
-      }
-    }
-    // If Shift+Enter, allow newline default behavior
-  });
-}
-
-// Optional: also allow the top send button to use same handler
-if (sendButton) {
-  sendButton.addEventListener("click", function (e) {
-    // ensure same processing path
-    e.preventDefault();
-    if (typeof chatForm.requestSubmit === "function") chatForm.requestSubmit();
-    else chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
-  });
-}
-</script>
-{% endblock %}
-
+  <script src="/static/script.js"></script>
+</body>
+</html>
