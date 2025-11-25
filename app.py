@@ -75,32 +75,46 @@ def chat_page():
 
 @app.route("/api/pinecone_stats")
 def pinecone_stats():
-    """Return simple index stats for dashboard (vector count, dims, metric)."""
+    """Return index stats for dashboard."""
     if not pc:
         return jsonify({"error": "Pinecone not initialized"}), 503
+
     try:
-        # Get list of indexes and describe this index
-        if index_name not in [i["name"] for i in pc.list_indexes()]:
-            return jsonify({"index_exists": False, "message": "Index not found (not yet created/uploaded by local pipeline)."})
-        # Describe index stats and metadata
-        idx = pc.index(index_name)
+        # Check index existence
+        existing = [i["name"] for i in pc.list_indexes()]
+        if index_name not in existing:
+            return jsonify({
+                "index_exists": False,
+                "message": "Index not found. Run local pipeline to create & upload embeddings."
+            })
+
+        # Correct new Pinecone API usage
+        idx = pc.Index(index_name)
+
+        # Describe index (namespaces, vector count, etc.)
         stats = idx.describe_index_stats()
-        # stats format varies; we'll summarize common fields
-        total_vectors = stats.get("total_vector_count", None) or stats.get("namespaces", {}).get("", {}).get("vector_count", None)
-        dimensions = stats.get("dimension", None) or 1536
-        metric = stats.get("metric", None) or "cosine"
-        namespaces = list(stats.get("namespaces", {}).keys()) if stats.get("namespaces") else []
+
+        total_vectors = (
+            stats.get("total_vector_count")
+            or stats.get("namespaces", {}).get("", {}).get("vector_count")
+            or 0
+        )
+
+        dimension = stats.get("dimension", 1536)
+        metric = stats.get("metric", "cosine")
+        namespaces = list(stats.get("namespaces", {}).keys())
+
         return jsonify({
             "index_exists": True,
             "total_vectors": total_vectors,
-            "dimension": dimensions,
+            "dimension": dimension,
             "metric": metric,
             "namespaces": namespaces,
             "raw_stats": stats
         })
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
 
 @app.route("/get", methods=["POST"])
 def chat():
@@ -153,3 +167,4 @@ def chat():
 if __name__ == "__main__":
     # When running locally for development, run Flask directly.
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=False)
+
