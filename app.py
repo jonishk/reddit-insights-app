@@ -75,34 +75,53 @@ def chat_page():
 
 @app.route("/api/pinecone_stats")
 def pinecone_stats():
-    """Return index stats for dashboard."""
-    if not pc:
-        return jsonify({"error": "Pinecone not initialized"}), 503
+    """Return index stats for dashboard (safe for Render)."""
+
+    # 1. Verify Pinecone client exists
+    if pc is None:
+        return jsonify({
+            "error": "Pinecone client not initialized. Check PINECONE_API_KEY."
+        }), 503
 
     try:
-        # Check index existence
-        existing = [i["name"] for i in pc.list_indexes()]
-        if index_name not in existing:
+        # 2. Check connection / list indexes
+        try:
+            index_list = [i["name"] for i in pc.list_indexes()]
+        except Exception as e:
+            return jsonify({
+                "error": f"Unable to list indexes: {str(e)}",
+                "index_exists": False
+            }), 500
+
+        # 3. Index not found
+        if index_name not in index_list:
             return jsonify({
                 "index_exists": False,
-                "message": "Index not found. Run local pipeline to create & upload embeddings."
+                "message": f"Index '{index_name}' not found. "
+                           "Run local pipeline to create & upload embeddings."
             })
 
-        # Correct new Pinecone API usage
-        idx = pc.Index(index_name)
+        # 4. Safely initialize index handle using new API
+        try:
+            idx = pc.Index(index_name)
+        except Exception as e:
+            return jsonify({
+                "error": f"Could not initialize Pinecone Index object: {str(e)}"
+            }), 500
 
-        # Describe index (namespaces, vector count, etc.)
-        stats = idx.describe_index_stats()
+        # 5. Get stats safely
+        try:
+            stats = idx.describe_index_stats()
+        except Exception as e:
+            return jsonify({
+                "error": f"Could not retrieve index stats: {str(e)}"
+            }), 500
 
-        total_vectors = (
-            stats.get("total_vector_count")
-            or stats.get("namespaces", {}).get("", {}).get("vector_count")
-            or 0
-        )
-
+        # 6. Extract fields
+        namespaces = list(stats.get("namespaces", {}).keys())
+        total_vectors = stats.get("total_vector_count", 0)
         dimension = stats.get("dimension", 1536)
         metric = stats.get("metric", "cosine")
-        namespaces = list(stats.get("namespaces", {}).keys())
 
         return jsonify({
             "index_exists": True,
@@ -115,6 +134,7 @@ def pinecone_stats():
 
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
 
 @app.route("/get", methods=["POST"])
 def chat():
@@ -167,4 +187,5 @@ def chat():
 if __name__ == "__main__":
     # When running locally for development, run Flask directly.
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=False)
+
 
