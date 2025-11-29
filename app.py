@@ -108,25 +108,36 @@ def pinecone_stats():
         return jsonify({"error": "Pinecone client not initialized"}), 500
 
     try:
-        # Check index list
-        index_list = [i["name"] for i in pc.list_indexes()]
+        # list indexes
+        try:
+            index_list = [i["name"] for i in pc.list_indexes()]
+        except Exception as e:
+            return jsonify({
+                "error": f"Unable to list indexes: {str(e)}"
+            }), 500
+
+        # index absent
         if INDEX_NAME not in index_list:
             return jsonify({
                 "index_exists": False,
-                "message": f"Index '{INDEX_NAME}' not found. Run local pipeline first."
+                "message": f"Index '{INDEX_NAME}' not found. Run local pipeline upload."
             })
 
-        # v7 method: pc.index(), NOT pc.Index()
+        # ******** THE FIX: use pc.Index(), not pc.index() ********
         try:
-            idx = pc.index(INDEX_NAME)
+            idx = pc.Index(INDEX_NAME)
         except Exception as e:
-            return jsonify({"error": f"Could not connect to index: {repr(e)}"}), 500
+            return jsonify({
+                "error": f"Could not connect to index: {repr(e)}"
+            }), 500
 
-        # Stats call
+        # get stats
         try:
             stats = idx.describe_index_stats()
         except Exception as e:
-            return jsonify({"error": f"describe_index_stats failed: {repr(e)}"}), 500
+            return jsonify({
+                "error": f"describe_index_stats failed: {repr(e)}"
+            }), 500
 
         return jsonify({
             "index_exists": True,
@@ -139,6 +150,7 @@ def pinecone_stats():
 
     except Exception as e:
         return jsonify({"error": repr(e)}), 500
+
 
 
 # ===============================
@@ -191,3 +203,4 @@ def chat():
 # ===============================
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=False)
+
