@@ -44,16 +44,25 @@ except Exception as e:
     print("Error initializing Pinecone client:", e)
     pc = None
 
-# LLM + prompt
+# LLM / prompt
 system_prompt = (
-    "You are a research assistant summarizing Reddit discussions..."
+    "You are a research assistant summarizing Reddit discussions about software tools "
+    "used in Law, Construction, and Tech industries.\n\n"
+    "Use ONLY the provided Reddit excerpts to answer accurately. "
+    "If the context does not include relevant data, respond: "
+    "'I don’t know based on the provided Reddit data.'\n\n"
+    "Context:\n{context}"
 )
-llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2, max_tokens=400)
+
+llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.2)
+
 prompt = ChatPromptTemplate.from_messages([
     ("system", system_prompt),
     ("human", "{input}")
 ])
+
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
+
 
 @app.route("/")
 def dashboard():
@@ -124,3 +133,4 @@ def chat():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8080)), debug=False)
+
