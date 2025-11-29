@@ -13,6 +13,8 @@ from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import ChatPromptTemplate
 from pinecone import Pinecone, ServerlessSpec
+import pinecone
+print("Pinecone SDK Version:", pinecone.__version__)
 
 load_dotenv()
 
@@ -187,5 +189,6 @@ def chat():
 if __name__ == "__main__":
     # When running locally for development, run Flask directly.
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=False)
+
 
 
