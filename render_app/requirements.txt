@@ -1,5 +1,6 @@
 Flask==3.1.2
 python-dotenv==1.1.1
+gunicorn==21.2.0
 
 # OpenAI + LangChain
 openai==2.3.0
@@ -10,6 +11,3 @@ langchain-openai==0.3.35
 
 # Pinecone (latest stable)
 pinecone-client==6.0.0
-
-
-
