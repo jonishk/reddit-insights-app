@@ -134,15 +134,10 @@ The Render version is in /render_app. It includes:
 - Minimal requirements.txt
 - Clean HTML/CSS chatbot interface
 
-Deploy steps:
-- Push repo to GitHub
-- Create Render Web Service
-- Use render_app/ as root folder
-- Set environment variables in Render dashboard
-
-Then open in browser:
+Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+
 
 
