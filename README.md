@@ -5,40 +5,70 @@
 
 ## Project Overview
 
-This project aims to build a research tool that uses Reddit discussions to surface industry-specific insights, particularly about commonly used software and related pain points in law firms, construction, and tech. Posts and comments are scraped from selected subreddits, cleaned, and analyzed for software/tool mentions. A Retrieval-Augmented Generation (RAG) chatbot was developed so users can query insights conversationally. The project also compares RAG performance with an LLM-only baseline.
+This project extends the Reddit Insights Chatbot developed during Practicum I.
+The goal is to build a fully automated, scalable, cloud-deployable Retrieval-Augmented Generation (RAG) system that:
 
-Key Features:
+- Collects Reddit posts programmatically
 
-- Reddit Data Collection: Scrapes thousands of posts from selected subreddits using the Pushshift API
+- Cleans and filters irrelevant content
 
-- Data Cleaning & Filtering: Removes duplicates, irrelevant text, and short posts
+- Performs semantic classification, sentiment scoring, and keyword extraction
 
-- Sentiment Analysis: Uses VADER sentiment scoring to analyze tone around each tool
+- Indexes all final documents into Pinecone
 
-- RAG Chatbot: Combines a retrieval pipeline (Pinecone + HuggingFace embeddings) with OpenAI GPT-3.5-turbo for grounded answers
+- Provides an interactive chatbot that answers questions grounded ONLY in Reddit evidence
 
-- Evaluation System: Compares RAG vs LLM-only accuracy using precision, recall, and F1-score
+- Deploys to the cloud (Render.com) for public access
 
-- Flask Web App: Interactive dashboard with progress logs and chatbot interface
+The chatbot supports three industries: Law, Construction, Tech
 
 Project Structure
 <pre>
-├── app.py                     # Flask web app for chatbot and pipeline
-├── evaluate.py                # Script for model evaluation (RAG vs LLM)
-├── data_collection.py         # Reddit data scraping
-├── data_clean.py              # Cleaning and preprocessing
-├── data_sentiment.py          # Sentiment analysis
-├── store_index.py             # Create Pinecone index
-├── static/                    # CSS and JS files
-│   ├── style.css
-│   └── script.js
+project/
+│   README.md
+│   requirements.txt
+│   run_pipeline.py
+│   evaluate.py
+│   data_collection.py
+│   data_clean_and_classify.py
+│   data_sentiment.py
+│   store_index.py
+│   reset_tracker.py
+│   db.py
+│   logger_utils.py
+│   full_evaluation.ipynb
+│
+├── config/
+│   ├── keywords.json
+│   ├── questions.json
+│   └── subreddits.json
+│
+├── data/           (Not included — too large, provided via Google Drive)
+│   ├── reddit_data.csv
+│   ├── reddit_data_clean.csv
+│   ├── reddit_data_semantic_clean.csv
+│   ├── reddit_data_sentiment.csv
+│   └── evaluation_results.csv
+│
 ├── templates/
-│   └── index.html             # Web interface
-├── questions.json             # Evaluation question set
-├── requirements.txt           # Python dependencies
-├── .env                       # API keys (OpenAI, Pinecone)
-└── README.md
-└── project_journey.md         # Project Journey (Online Presence)
+│   chatbot.html
+│   dashboard.html
+│   manager.html
+│   pipeline.html
+│   base.html
+│
+├── static/
+│   style.css
+│   script.js
+│   manager.js
+│
+└── render_app/     (Cloud version)
+    ├── app.py
+    ├── static/style.css
+    ├──  Procfile
+    ├── requirements.txt
+    └── templates/chatbot.html
+
 </pre>
 
 # Installation & Setup
@@ -48,51 +78,71 @@ Project Structure
 Clone the repository
 
 ```bash
-git clone https://github.com/jonishk/MSDS692-Data-Science-Practicum-1.git
-cd MSDS692-Data-Science-Practicum-1-main
-
+git clone https://github.com/jonishk/reddit-insights-app.git
+cd reddit-insights-app
 ```
 
-### STEP 02- Create a conda environment after opening the repository
+### STEP 02- Create and activate environment
 
 ```bash
-conda create -n reditbot python=3.10.18 -y
-````
-```bash
+conda create -n reditbot python=3.10
 conda activate reditbot
 ````
 
-### STEP 03- Install dependencies
+### STEP 03- Install required packages
 ```bash
 pip install -r requirements.txt
 ```
-### STEP 04- Set up environment variables:
-Edit .env file with your API keys:
+### STEP 04- Environment Variables (.env file)
+Create a .env file (not included in repo):
 ```bash
-OPENAI_API_KEY=your_openai_api_key
-PINECONE_API_KEY=your_pinecone_api_key
-
+OPENAI_API_KEY=your_key_here
+PINECONE_API_KEY=your_key_here
+PINECONE_INDEX=reddit-insights
 ```
-### STEP 04 - run the app using app.py
+
+----------------------------------------------------------------------------------------------------
+
+### Running the Full Pipeline
+```bash
+python run_pipeline.py
+```
+This executes:
+
+1. data_collection.py
+
+2. data_clean_and_classify.py
+
+3. data_sentiment.py
+
+4. store_index.py
+
+----------------------------------------------------------------------------------------------------
+### Running the Local Chatbot
 ```bash
 python app.py
 ```
-### STEP 05 - on your browser run:
+Then open in browser:
 ```bash
-http://localhost:8080
+http://127.0.0.1:8080/
 ```
+----------------------------------------------------------------------------------------------------
+### Deployment (Render Version)
+The Render version is in /render_app. It includes:
 
+- Streamlined app.py
+- Minimal requirements.txt
+- Clean HTML/CSS chatbot interface
 
+Deploy steps:
+- Push repo to GitHub
+- Create Render Web Service
+- Use render_app/ as root folder
+- Set environment variables in Render dashboard
 
-
-
-
-
-
-
-
-
-
-
+Then open in browser:
+```bash
+https://reddit-insights-app.onrender.com/
+```
 
 
