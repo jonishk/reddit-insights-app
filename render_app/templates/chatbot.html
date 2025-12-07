@@ -4,35 +4,30 @@
   <meta charset="utf-8">
   <title>Reddit Insights • Chatbot</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-  <!-- NAVBAR -->
   <div class="topnav">
     <div class="brand">Reddit Insights Chatbot</div>
   </div>
 
-  <!-- MAIN CHAT PANEL -->
   <main class="main-container">
     <section class="panel">
       <h1>Chatbot</h1>
-      <p class="muted">
-        Ask questions about tools, pain points, themes, or insights.  
-        Responses are retrieved from indexed Reddit discussions.
-      </p>
+      <p class="muted">Ask about tools, pain points, or industry insights.</p>
 
       <div class="chat-container">
-        <!-- Chat window -->
         <div class="chat-window" id="chat-window">
           <div class="message bot-message">
             <div class="message-text">Hey there 👋 How can I help?</div>
           </div>
         </div>
 
-        <!-- Message form -->
         <form id="chat-form" class="chat-form">
-          <textarea id="chat-input" class="message-input"
-            placeholder="Type your question..." required></textarea>
+          <textarea id="chat-input" class="message-input" placeholder="Type your question..." required></textarea>
 
           <div class="chat-controls">
             <button type="submit" id="send-message" class="send-btn">Send</button>
@@ -44,73 +39,73 @@
 
 <script>
 const chatWindow = document.getElementById("chat-window");
-const chatForm   = document.getElementById("chat-form");
-const chatInput  = document.getElementById("chat-input");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
 
-// escape HTML
-function escapeHtml(t) {
-  return t.replace(/[&<>"']/g, m => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
-  }[m]));
+// Escape only user text
+function escapeHtml(str) {
+  return str.replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  }[c]));
 }
 
-// Add chat bubble
-function appendMessage(content, className) {
+function appendBotMessage(markdownText) {
   const div = document.createElement("div");
-  div.className = className;
-  div.innerHTML = `<div class="message-text">${content}</div>`;
+  div.className = "message bot-message";
+
+  const html = marked.parse(markdownText);
+  div.innerHTML = `<div class="message-text">${html}</div>`;
+
   chatWindow.appendChild(div);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// Loading animation
-function showThinking() {
-  appendMessage(
-    `<div class="thinking-indicator">
-       <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-     </div>`,
-    "message bot-message thinking"
-  );
+function appendUserMessage(text) {
+  const div = document.createElement("div");
+  div.className = "message user-message";
+  div.innerHTML = `<div class="message-text">${escapeHtml(text)}</div>`;
+  chatWindow.appendChild(div);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// MAIN SEND HANDLER
+function showThinking() {
+  const div = document.createElement("div");
+  div.className = "message bot-message thinking";
+  div.innerHTML = `
+    <div class="thinking-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>`;
+  chatWindow.appendChild(div);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
 chatForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const text = chatInput.value.trim();
   if (!text) return;
 
-  appendMessage(escapeHtml(text), "message user-message");
+  appendUserMessage(text);
   chatInput.value = "";
+
   showThinking();
 
   try {
     const form = new URLSearchParams();
     form.append("msg", text);
 
-    const res = await fetch("/get", {
-      method: "POST",
-      body: form
-    });
+    const res = await fetch("/get", { method: "POST", body: form });
+    const data = await res.json();
 
-    const data = await res.json();  // <<--- IMPORTANT FIX (expect JSON)
-    const reply = data.answer || "I don't know based on the provided Reddit data.";
+    document.querySelector(".thinking").remove();
+    appendBotMessage(data.answer);
 
-    // Remove thinking indicator
-    const thinking = document.querySelector(".thinking");
-    if (thinking) thinking.remove();
-
-    appendMessage(reply, "message bot-message");
   } catch (err) {
-    const thinking = document.querySelector(".thinking");
-    if (thinking) thinking.remove();
-
-    appendMessage("Server error: unable to get response.", "message bot-message");
-    console.error(err);
+    document.querySelector(".thinking").remove();
+    appendBotMessage("**Error contacting server.**");
   }
 });
 
-// ENTER to send
-chatInput.addEventListener("keydown", (e) => {
+chatInput.addEventListener("keydown", e => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
     chatForm.requestSubmit();
