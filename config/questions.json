@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "question": "What are the most discussed software tools for project management in the construction industry?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 2,
+    "question": "Which legal practice management tools are popular among law firms?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 3,
+    "question": "What do Reddit users think about using Clio for legal case management?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 4,
+    "question": "How does sentiment differ between users discussing Procore and Autodesk tools?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 5,
+    "question": "Which software tools are most frequently mentioned for document collaboration in tech companies?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 6,
+    "question": "What pain points do construction professionals mention about scheduling tools?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 7,
+    "question": "Are there any open-source alternatives to expensive construction management tools discussed on Reddit?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 8,
+    "question": "What kind of feedback do users give about using Notion or Trello for team collaboration?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 9,
+    "question": "Which CRM tools are mentioned by users working in the tech industry?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 10,
+    "question": "Do Reddit users report any security concerns related to law practice management software?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 11,
+    "question": "What is the most common sentiment around using Microsoft Project for construction scheduling?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 12,
+    "question": "What kinds of software integration issues are discussed in construction forums?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 13,
+    "question": "Which tools do law professionals prefer for document automation?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 14,
+    "question": "Are Reddit users generally positive or negative about using Slack for remote work?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 15,
+    "question": "Which accounting or billing tools are popular among freelancers in tech?",
+    "expected_source": "in-scope"
+  },
+  {
+    "id": 16,
+    "question": "What is the capital city of Canada?",
+    "expected_source": "out-of-scope"
+  },
+  {
+    "id": 17,
+    "question": "Who won the FIFA World Cup in 2018?",
+    "expected_source": "out-of-scope"
+  },
+  {
+    "id": 18,
+    "question": "What are some health benefits of regular exercise?",
+    "expected_source": "out-of-scope"
+  },
+  {
+    "id": 19,
+    "question": "Explain how photosynthesis works in plants.",
+    "expected_source": "out-of-scope"
+  },
+  {
+    "id": 20,
+    "question": "Who invented the telephone?",
+    "expected_source": "out-of-scope"
+  }
+]

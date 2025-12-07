@@ -1,0 +1,114 @@
+<!-- templates/pipeline.html -->
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Pipeline Tools</h1>
+  <p class="muted">Run individual pipeline steps or the full automated pipeline.</p>
+
+  <div class="pipeline-controls">
+    <button onclick="runStream('collect')">Collect Data</button>
+    <button onclick="runStream('clean_semantic')">Clean + Semantic</button>
+    <button onclick="runStream('sentiment')">Sentiment Analysis</button>
+    <button onclick="runStream('index')">Re-Index Data</button>
+    <button onclick="runStream('evaluate')">Run Evaluation</button>
+    <button onclick="runStream('full')">Run Full Pipeline</button>
+  </div>
+
+  <div id="progress-bar-container"><div id="progress-bar"></div></div>
+  <div id="pipeline-output" class="pipeline-output">Waiting for logs...</div>
+
+  <h3>Evaluation Results</h3>
+  <div id="eval-results"></div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentSource = null;
+
+function runStream(step) {
+  if (currentSource) {
+    currentSource.close();
+    currentSource = null;
+  }
+
+  const output = document.getElementById("pipeline-output");
+  const progressBar = document.getElementById("progress-bar");
+
+  output.innerText = `Starting ${step.toUpperCase()}...\n\n`;
+  progressBar.style.width = "0%";
+
+  const url = step === "full" ? "/stream/full" : `/stream/${step}`;
+  currentSource = new EventSource(url);
+
+  let lineCount = 0;
+
+  currentSource.onmessage = (event) => {
+    output.innerText += event.data + "\n";
+    output.scrollTop = output.scrollHeight;
+    lineCount++;
+    progressBar.style.width = Math.min(100, lineCount) + "%";
+  };
+
+  currentSource.addEventListener("close", () => {
+    output.innerText += "\n Stream finished.\n";
+    progressBar.style.width = "100%";
+    if (currentSource) currentSource.close();
+    currentSource = null;
+
+    if (step === "evaluate") {
+      setTimeout(showEvaluationResults, 1500);
+    }
+  });
+
+  currentSource.onerror = (err) => {
+    output.innerText += "\n Stream error.\n";
+    console.error(err);
+    if (currentSource) currentSource.close();
+    currentSource = null;
+  };
+}
+
+async function showEvaluationResults() {
+  const container = document.getElementById("eval-results");
+  const res = await fetch("/get_evaluation_results");
+
+  if (!res.ok) {
+    container.innerHTML = "<p style='color:red;'>No evaluation results found.</p>";
+    return;
+  }
+
+  const data = await res.json();
+  let html = `
+    <table>
+      <tr>
+        <th>Question</th>
+        <th>RAG Answer</th>
+        <th>LLM Answer</th>
+        <th>RAG Relevance</th>
+        <th>LLM Relevance</th>
+      </tr>`;
+
+  data.forEach(r => {
+    html += `
+      <tr>
+        <td>${escapeHtml(r.question)}</td>
+        <td>${escapeHtml(r.rag_answer)}</td>
+        <td>${escapeHtml(r.llm_answer)}</td>
+        <td>${r.rag_relevance}</td>
+        <td>${r.llm_relevance}</td>
+      </tr>`;
+  });
+
+  html += `</table>`;
+  container.innerHTML = html;
+}
+
+function escapeHtml(text) {
+  if (!text) return "";
+  return text.replace(/[&<>'"]/g, (c) => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','\'':'&#39;','"':'&quot;'
+  }[c]));
+}
+</script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{
+  "Law": [
+    "clio", "filevine", "smokeball", "practicepanther", "lexisnexis",
+    "westlaw", "imanage", "everlaw", "relativity", "lawpay",
+    "ediscovery", "casepoint", "nextpoint", "legalzoom", "rocket lawyer",
+    "netdocuments", "prolaw", "cosmolex", "mycase", "leap"
+  ],
+
+  "Construction": [
+    "autocad", "revit", "bim", "sketchup", "bluebeam", "procore",
+    "plangrid", "primavera", "buildertrend", "coconstruct", "fieldwire",
+    "rhino", "solidworks", "synchro", "planwell", "sage 300", "prolog",
+    "estimating", "takeoff software", "construction management software",
+    "microsoft project"
+  ],
+
+  "Tech": [
+    "jira", "docker", "kubernetes", "ansible", "aws", "azure",
+    "gcp", "linux", "ubuntu", "debian", "centos",
+    "grafana", "prometheus", "splunk", "servicenow",
+    "github", "gitlab", "bitbucket", "postman",
+    "notion", "trello", "slack", "confluence",
+    "remote work", "devops"
+  ],
+
+  "Productivity": [
+    "notion", "evernote", "trello", "asana", "monday", "clickup",
+    "microsoft project", "office 365", "google workspace",
+    "zoom", "teams", "collaboration software", "task management"
+  ],
+
+  "CRM_Billing": [
+    "salesforce", "hubspot", "zoho", "quickbooks", "xero", "wave",
+    "freshbooks", "stripe", "square", "billing software",
+    "accounting software", "finance tools"
+  ],
+
+  "Security_Others": [
+    "firewall", "okta", "duo", "mfa", "sso", "varonis",
+    "endpoint security", "cybersecurity tools"
+  ]
+}

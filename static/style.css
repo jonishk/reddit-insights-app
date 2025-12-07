@@ -1,0 +1,246 @@
+/* -------------------------------------------------------
+   GLOBAL
+------------------------------------------------------- */
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto;
+  background: linear-gradient(180deg, #f8f8ff 0%, #eef0ff 100%);
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Panels & layout */
+.panel {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.main-container {
+  padding: 22px;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+
+/* Cards */
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin:12px 0; }
+
+.card {
+  background: #fafaff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+.card.small { display:inline-block; margin:6px; padding:8px; }
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* -------------------------------------------------------
+   MODERN BUTTONS
+------------------------------------------------------- */
+button,
+.pipeline-controls button,
+.send-btn {
+  background: linear-gradient(135deg, #6c63ff, #8a85ff);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+button:hover,
+.pipeline-controls button:hover,
+.send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+button:active,
+.pipeline-controls button:active,
+.send-btn:active {
+  transform: scale(0.97);
+}
+
+/* Pipeline container */
+.pipeline-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  justify-content: center;
+}
+
+/* -------------------------------------------------------
+   LOGS + OUTPUT PANELS
+------------------------------------------------------- */
+.pipeline-output {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  font-family: "JetBrains Mono", monospace;
+  height: 200px;
+  overflow-y: auto;
+  box-shadow: inset 0 0 0 1px #ececff, 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Progress bar */
+#progress-bar-container {
+  width: 100%;
+  height: 12px;
+  border-radius: 12px;
+  background: #e6e6ff;
+  overflow: hidden;
+  margin: 14px 0;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #6c63ff, #8a85ff);
+  transition: width 0.25s ease;
+}
+
+/* -------------------------------------------------------
+   TABLES
+------------------------------------------------------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #f3f3ff;
+  padding: 10px;
+  font-weight: 700;
+  border-bottom: 1px solid #e8e8ff;
+}
+
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f0f0ff;
+}
+
+/* -------------------------------------------------------
+   CHATBOT IMPROVED DESIGN
+------------------------------------------------------- */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Chat window */
+.chat-window {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  min-height: 320px;
+  max-height: 62vh;
+  overflow-y: auto;
+  border: 1px solid #e6e6ff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  scroll-behavior: smooth;
+}
+
+/* Messages */
+.message {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: flex-end;
+}
+
+.message-text {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  padding: 12px 14px;
+  border-radius: 14px;
+  max-width: 78%;
+}
+
+/* Bot */
+.bot-message .message-text {
+  background: #ecebff;
+  color: #222;
+  border-radius: 14px 14px 14px 4px;
+}
+
+/* User */
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-text {
+  background: #6c63ff;
+  color: white;
+  border-radius: 14px 14px 4px 14px;
+}
+
+/* Chat input */
+.chat-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.message-input {
+  flex: 1;
+  min-height: 58px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #dcdcff;
+  font-size: 0.95rem;
+  resize: none;
+  background: #fafaff;
+  transition: border 0.2s;
+}
+
+.message-input:focus {
+  border: 1px solid #6c63ff;
+  outline: none;
+}
+
+/* -------------------------------------------------------
+   NAVBAR
+------------------------------------------------------- */
+.topnav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 20px;
+  background:#ffffff;
+  border-bottom:1px solid #e6e6ff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.03);
+}
+
+.topnav .brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+.topnav .navlinks a {
+  margin-left: 16px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.topnav .navlinks a:hover {
+  color: #6c63ff;
+}

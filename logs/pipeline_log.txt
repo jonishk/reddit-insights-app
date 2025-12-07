@@ -1,0 +1,1261 @@
+Pipeline Log Initiated
+
+[2025-12-01 13:49:55] ================================================================================
+[2025-12-01 13:49:55] STARTING FULL PIPELINE
+[2025-12-01 13:49:55] ================================================================================
+[2025-12-01 13:49:55] --- Running Step: Data Collection ---
+[2025-12-01 13:49:55] Starting script: data_collection.py
+[2025-12-01 20:50:00] Starting Reddit scraper…
+[2025-12-01 20:50:00] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-01 20:50:36]  r/sysadmin: 57 posts, 466 comments
+[2025-12-01 20:50:36] Fetching r/msp (Tech) attempt 1
+[2025-12-01 20:50:44]  r/msp: 13 posts, 104 comments
+[2025-12-01 20:50:44] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-01 20:50:48]  r/talesfromtechsupport: 2 posts, 24 comments
+[2025-12-01 20:50:48] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-01 20:50:50]  r/iiiiiiitttttttttttt: 1 posts, 6 comments
+[2025-12-01 20:50:50] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-01 20:50:52]  r/techsupportgore: 1 posts, 8 comments
+[2025-12-01 20:50:52] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-01 20:50:59]  r/ITCareerQuestions: 18 posts, 121 comments
+[2025-12-01 20:50:59] Fetching r/netsec (Tech) attempt 1
+[2025-12-01 20:51:03]  r/netsec: 6 posts, 2 comments
+[2025-12-01 20:51:03] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-01 20:51:34]  r/cybersecurity: 50 posts, 283 comments
+[2025-12-01 20:51:34] Fetching r/technology (Tech) attempt 1
+[2025-12-01 20:52:28]  r/technology: 59 posts, 616 comments
+[2025-12-01 20:52:28] Fetching r/tech (Tech) attempt 1
+[2025-12-01 20:52:30]  r/tech: 1 posts, 4 comments
+[2025-12-01 20:52:30] Fetching r/gadgets (Tech) attempt 1
+[2025-12-01 20:52:31]  r/gadgets: 1 posts, 15 comments
+[2025-12-01 20:52:31] Fetching r/apple (Tech) attempt 1
+[2025-12-01 20:52:38]  r/apple: 7 posts, 86 comments
+[2025-12-01 20:52:38] Fetching r/linux (Tech) attempt 1
+[2025-12-01 20:52:49]  r/linux: 22 posts, 201 comments
+[2025-12-01 20:52:49] Fetching r/Construction (Construction) attempt 1
+[2025-12-01 20:52:59]  r/Construction: 21 posts, 161 comments
+[2025-12-01 20:52:59] Fetching r/Contractors (Construction) attempt 1
+[2025-12-01 20:53:00] No new items for r/Contractors
+[2025-12-01 20:53:00] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-01 20:53:46]  r/HomeImprovement: 100 posts, 393 comments
+[2025-12-01 20:53:46] Fetching r/DIY (Construction) attempt 1
+[2025-12-01 20:54:46]  r/DIY: 100 posts, 463 comments
+[2025-12-01 20:54:46] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-01 20:54:46] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-01 20:54:49] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-01 20:54:50] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-01 20:54:53] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-01 20:54:53] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-01 20:54:56] Fetching r/Electrical (Construction) attempt 1
+[2025-12-01 20:55:13]  r/Electrical: 42 posts, 204 comments
+[2025-12-01 20:55:13] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-01 20:56:14]  r/Plumbing: 100 posts, 347 comments
+[2025-12-01 20:56:14] Fetching r/HVAC (Construction) attempt 1
+[2025-12-01 20:56:24]  r/HVAC: 14 posts, 131 comments
+[2025-12-01 20:56:24] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-01 20:56:35]  r/AskEngineers: 18 posts, 93 comments
+[2025-12-01 20:56:35] Fetching r/legaltech (Law) attempt 1
+[2025-12-01 20:56:37]  r/legaltech: 3 posts, 18 comments
+[2025-12-01 20:56:37] Fetching r/LawFirm (Law) attempt 1
+[2025-12-01 20:56:41]  r/LawFirm: 5 posts, 46 comments
+[2025-12-01 20:56:41] Fetching r/Law (Law) attempt 1
+[2025-12-01 20:57:03]  r/Law: 30 posts, 312 comments
+[2025-12-01 20:57:03] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-01 20:58:00]  r/LegalAdvice: 100 posts, 347 comments
+[2025-12-01 20:58:00] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-01 20:59:00]  r/LegalAdviceUK: 100 posts, 725 comments
+[2025-12-01 20:59:00] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-01 20:59:36]  r/LegalAdviceCanada: 58 posts, 453 comments
+[2025-12-01 20:59:36] Fetching r/Paralegal (Law) attempt 1
+[2025-12-01 20:59:45]  r/Paralegal: 13 posts, 72 comments
+[2025-12-01 20:59:45] Fetching r/LawSchool (Law) attempt 1
+[2025-12-01 21:00:13]  r/LawSchool: 47 posts, 301 comments
+[2025-12-01 21:00:13] Fetching r/LegalNews (Law) attempt 1
+[2025-12-01 21:00:20]  r/LegalNews: 10 posts, 77 comments
+[2025-12-01 21:00:24] ### DONE: 999 posts + 6079 comments added.
+[2025-12-01 21:00:24] Total records in dataset: 143617
+[2025-12-01 14:00:24] Completed: data_collection.py
+[2025-12-01 14:00:24] --- Running Step: Semantic + Clean ---
+[2025-12-01 14:00:24] Starting script: week6_clean_and_classify.py
+[2025-12-01T21:00:50.534467] Week6: start (HF Embeddings version)
+[2025-12-01T21:00:52.980905] Loaded raw rows: 143617
+[2025-12-01T21:00:53.058528] Dropped duplicates: 0
+[2025-12-01T21:02:02.391602] Baseline saved: 133190 rows
+[2025-12-01T21:02:02.393603] Loading HuggingFace model...
+[2025-12-01T21:02:06.259901] Category prototypes embedded: ['Law', 'Construction', 'Tech']
+[2025-12-01T21:02:06.319978] Computing HF embeddings for 133190 rows...
+[2025-12-01T21:29:08.544796] Semantic cleaned saved: 0 rows
+[2025-12-01T21:29:08.553249] Week6 (HF version) completed.
+[2025-12-01 14:29:10] Completed: week6_clean_and_classify.py
+[2025-12-01 14:29:10] --- Running Step: Sentiment ---
+[2025-12-01 14:29:10] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-01 14:29:10] Starting script: data_sentiment.py
+[2025-12-01T14:29:14.448912] Starting sentiment analysis
+[2025-12-01T14:29:14.449545] Environment variable SENTIMENT_INPUT_FILE detected: data/reddit_data_semantic_clean.csv
+[2025-12-01T14:29:14.450567] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-01T14:29:14.479507] Loaded 0 rows
+[2025-12-01T14:29:15.208163] Saved output: data\reddit_data_sentiment.csv (0 rows)
+[2025-12-01T14:29:15.209669] Sentiment computation complete.
+[2025-12-01T14:29:15.209669] ============================================================
+[2025-12-01 14:29:15] Completed: data_sentiment.py
+[2025-12-01 14:29:15] --- Running Step: Indexing ---
+[2025-12-01 14:29:15] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Store Index (Week 6) ===
+Connected to Pinecone index: reddit-insights
+Sentiment rows: 0
+Unindexed IDs in tracker: 71727
+No new rows to index. Exiting.
+[2025-12-01 14:29:41] Completed: store_index.py
+[2025-12-01 14:29:41] Pipeline finished in 39.76 minutes.
+[2025-12-01 14:29:41] ================================================================================
+[2025-12-02 01:24:24] ================================================================================
+[2025-12-02 01:24:24] STARTING FULL PIPELINE
+[2025-12-02 01:24:24] ================================================================================
+[2025-12-02 01:24:24] --- Running Step: Data Collection ---
+[2025-12-02 01:24:24] Starting script: data_collection.py
+[2025-12-02 08:24:33] Starting Reddit scraper…
+[2025-12-02 08:24:33] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-02 08:24:43]  r/sysadmin: 19 posts, 150 comments
+[2025-12-02 08:24:43] Fetching r/msp (Tech) attempt 1
+[2025-12-02 08:24:47]  r/msp: 8 posts, 69 comments
+[2025-12-02 08:24:47] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-02 08:24:48] No new items for r/talesfromtechsupport
+[2025-12-02 08:24:48] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-02 08:24:51]  r/iiiiiiitttttttttttt: 1 posts, 10 comments
+[2025-12-02 08:24:51] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-02 08:24:52] No new items for r/techsupportgore
+[2025-12-02 08:24:52] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-02 08:24:56]  r/ITCareerQuestions: 9 posts, 51 comments
+[2025-12-02 08:24:56] Fetching r/netsec (Tech) attempt 1
+[2025-12-02 08:24:57] No new items for r/netsec
+[2025-12-02 08:24:57] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-02 08:25:02]  r/cybersecurity: 17 posts, 61 comments
+[2025-12-02 08:25:02] Fetching r/technology (Tech) attempt 1
+[2025-12-02 08:25:20]  r/technology: 27 posts, 223 comments
+[2025-12-02 08:25:20] Fetching r/tech (Tech) attempt 1
+[2025-12-02 08:25:21] No new items for r/tech
+[2025-12-02 08:25:21] Fetching r/gadgets (Tech) attempt 1
+[2025-12-02 08:25:22]  r/gadgets: 1 posts, 15 comments
+[2025-12-02 08:25:22] Fetching r/apple (Tech) attempt 1
+[2025-12-02 08:25:28]  r/apple: 3 posts, 45 comments
+[2025-12-02 08:25:28] Fetching r/linux (Tech) attempt 1
+[2025-12-02 08:25:30]  r/linux: 3 posts, 27 comments
+[2025-12-02 08:25:30] Fetching r/Construction (Construction) attempt 1
+[2025-12-02 08:25:38]  r/Construction: 15 posts, 77 comments
+[2025-12-02 08:25:38] Fetching r/Contractors (Construction) attempt 1
+[2025-12-02 08:25:39] No new items for r/Contractors
+[2025-12-02 08:25:39] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-02 08:26:02]  r/HomeImprovement: 82 posts, 250 comments
+[2025-12-02 08:26:02] Fetching r/DIY (Construction) attempt 1
+[2025-12-02 08:26:20]  r/DIY: 49 posts, 202 comments
+[2025-12-02 08:26:20] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-02 08:26:20] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-02 08:26:23] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-02 08:26:23] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-02 08:26:26] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-02 08:26:26] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-02 08:26:29] Fetching r/Electrical (Construction) attempt 1
+[2025-12-02 08:26:40]  r/Electrical: 25 posts, 99 comments
+[2025-12-02 08:26:40] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-02 08:27:10]  r/Plumbing: 100 posts, 433 comments
+[2025-12-02 08:27:10] Fetching r/HVAC (Construction) attempt 1
+[2025-12-02 08:27:15]  r/HVAC: 8 posts, 50 comments
+[2025-12-02 08:27:15] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-02 08:27:18]  r/AskEngineers: 3 posts, 18 comments
+[2025-12-02 08:27:18] Fetching r/legaltech (Law) attempt 1
+[2025-12-02 08:27:19] No new items for r/legaltech
+[2025-12-02 08:27:19] Fetching r/LawFirm (Law) attempt 1
+[2025-12-02 08:27:20] No new items for r/LawFirm
+[2025-12-02 08:27:20] Fetching r/Law (Law) attempt 1
+[2025-12-02 08:27:31]  r/Law: 16 posts, 161 comments
+[2025-12-02 08:27:31] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-02 08:27:56]  r/LegalAdvice: 100 posts, 241 comments
+[2025-12-02 08:27:56] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-02 08:28:06]  r/LegalAdviceUK: 29 posts, 148 comments
+[2025-12-02 08:28:06] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-02 08:28:18]  r/LegalAdviceCanada: 30 posts, 198 comments
+[2025-12-02 08:28:18] Fetching r/Paralegal (Law) attempt 1
+[2025-12-02 08:28:23]  r/Paralegal: 10 posts, 60 comments
+[2025-12-02 08:28:23] Fetching r/LawSchool (Law) attempt 1
+[2025-12-02 08:28:38]  r/LawSchool: 46 posts, 224 comments
+[2025-12-02 08:28:38] Fetching r/LegalNews (Law) attempt 1
+[2025-12-02 08:28:40]  r/LegalNews: 4 posts, 6 comments
+[2025-12-02 08:28:44] ### DONE: 605 posts + 2818 comments added.
+[2025-12-02 08:28:44] Total records in dataset: 147040
+[2025-12-02 01:28:44] Completed: data_collection.py
+[2025-12-02 01:28:44] --- Running Step: Semantic + Clean ---
+[2025-12-02 01:28:44] Starting script: week6_clean_and_classify.py
+[2025-12-02T08:29:14.255331] Week6: start (HF Embeddings version)
+[2025-12-02T08:29:17.135288] Loaded raw rows: 147040
+[2025-12-02T08:29:17.213834] Dropped duplicates: 0
+[2025-12-02T08:30:09.850594] Baseline saved: 136412 rows
+[2025-12-02T08:30:09.852103] Loading HuggingFace model...
+[2025-12-02T08:30:13.382769] Category prototypes embedded: ['Law', 'Construction', 'Tech']
+[2025-12-02T08:30:13.439657] Computing HF embeddings for 136412 rows...
+[2025-12-02T09:09:36.458708] Semantic cleaned saved: 0 rows
+[2025-12-02T09:09:36.465600] Week6 (HF version) completed.
+[2025-12-02 02:09:37] Completed: week6_clean_and_classify.py
+[2025-12-02 02:09:37] --- Running Step: Sentiment ---
+[2025-12-02 02:09:37] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-02 02:09:37] Starting script: data_sentiment.py
+[2025-12-02T02:09:40.940667] Starting sentiment analysis
+[2025-12-02T02:09:40.940667] Environment variable SENTIMENT_INPUT_FILE detected: data/reddit_data_semantic_clean.csv
+[2025-12-02T02:09:40.941667] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-02T02:09:40.955016] Loaded 0 rows
+[2025-12-02T02:09:41.481570] Saved output: data\reddit_data_sentiment.csv (0 rows)
+[2025-12-02T02:09:41.482570] Sentiment computation complete.
+[2025-12-02T02:09:41.482570] ============================================================
+[2025-12-02 02:09:41] Completed: data_sentiment.py
+[2025-12-02 02:09:41] --- Running Step: Indexing ---
+[2025-12-02 02:09:41] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Store Index (Week 6) ===
+Connected to Pinecone index: reddit-insights
+Sentiment rows: 0
+Unindexed IDs in tracker: 75150
+No new rows to index. Exiting.
+[2025-12-02 02:09:57] Completed: store_index.py
+[2025-12-02 02:09:57] Pipeline finished in 45.54 minutes.
+[2025-12-02 02:09:57] ================================================================================
+[2025-12-03 01:24:16] ================================================================================
+[2025-12-03 01:24:16] STARTING FULL PIPELINE
+[2025-12-03 01:24:16] ================================================================================
+[2025-12-03 01:24:16] --- Running Step: Data Collection ---
+[2025-12-03 01:24:16] Starting script: data_collection.py
+[2025-12-03 08:24:23] Starting Reddit scraper…
+[2025-12-03 08:24:23] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-03 08:24:47]  r/sysadmin: 56 posts, 421 comments
+[2025-12-03 08:24:47] Fetching r/msp (Tech) attempt 1
+[2025-12-03 08:24:53]  r/msp: 19 posts, 137 comments
+[2025-12-03 08:24:53] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-03 08:24:54]  r/talesfromtechsupport: 1 posts, 12 comments
+[2025-12-03 08:24:54] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-03 08:24:58]  r/iiiiiiitttttttttttt: 4 posts, 53 comments
+[2025-12-03 08:24:58] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-03 08:24:59] No new items for r/techsupportgore
+[2025-12-03 08:24:59] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-03 08:25:06]  r/ITCareerQuestions: 21 posts, 166 comments
+[2025-12-03 08:25:06] Fetching r/netsec (Tech) attempt 1
+[2025-12-03 08:25:07]  r/netsec: 2 posts, 0 comments
+[2025-12-03 08:25:07] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-03 08:25:21]  r/cybersecurity: 54 posts, 254 comments
+[2025-12-03 08:25:21] Fetching r/technology (Tech) attempt 1
+[2025-12-03 08:26:05]  r/technology: 84 posts, 783 comments
+[2025-12-03 08:26:05] Fetching r/tech (Tech) attempt 1
+[2025-12-03 08:26:07]  r/tech: 2 posts, 15 comments
+[2025-12-03 08:26:07] Fetching r/gadgets (Tech) attempt 1
+[2025-12-03 08:26:10]  r/gadgets: 5 posts, 63 comments
+[2025-12-03 08:26:10] Fetching r/apple (Tech) attempt 1
+[2025-12-03 08:26:17]  r/apple: 14 posts, 122 comments
+[2025-12-03 08:26:17] Fetching r/linux (Tech) attempt 1
+[2025-12-03 08:26:26]  r/linux: 20 posts, 180 comments
+[2025-12-03 08:26:26] Fetching r/Construction (Construction) attempt 1
+[2025-12-03 08:26:40]  r/Construction: 37 posts, 282 comments
+[2025-12-03 08:26:40] Fetching r/Contractors (Construction) attempt 1
+[2025-12-03 08:26:41] No new items for r/Contractors
+[2025-12-03 08:26:41] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-03 08:27:03]  r/HomeImprovement: 100 posts, 451 comments
+[2025-12-03 08:27:03] Fetching r/DIY (Construction) attempt 1
+[2025-12-03 08:27:13]  r/DIY: 37 posts, 174 comments
+[2025-12-03 08:27:13] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-03 08:27:13] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-03 08:27:16] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-03 08:27:17] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-03 08:27:20] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-03 08:27:20] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-03 08:27:23] Fetching r/Electrical (Construction) attempt 1
+[2025-12-03 08:27:40]  r/Electrical: 63 posts, 298 comments
+[2025-12-03 08:27:40] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-03 08:28:04]  r/Plumbing: 100 posts, 441 comments
+[2025-12-03 08:28:04] Fetching r/HVAC (Construction) attempt 1
+[2025-12-03 08:28:12]  r/HVAC: 22 posts, 198 comments
+[2025-12-03 08:28:12] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-03 08:28:16]  r/AskEngineers: 10 posts, 71 comments
+[2025-12-03 08:28:16] Fetching r/legaltech (Law) attempt 1
+[2025-12-03 08:28:17]  r/legaltech: 2 posts, 15 comments
+[2025-12-03 08:28:17] Fetching r/LawFirm (Law) attempt 1
+[2025-12-03 08:28:20]  r/LawFirm: 2 posts, 30 comments
+[2025-12-03 08:28:20] Fetching r/Law (Law) attempt 1
+[2025-12-03 08:28:37]  r/Law: 36 posts, 328 comments
+[2025-12-03 08:28:37] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-03 08:28:57]  r/LegalAdvice: 100 posts, 218 comments
+[2025-12-03 08:28:57] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-03 08:29:25]  r/LegalAdviceUK: 100 posts, 704 comments
+[2025-12-03 08:29:25] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-03 08:29:49]  r/LegalAdviceCanada: 59 posts, 424 comments
+[2025-12-03 08:29:49] Fetching r/Paralegal (Law) attempt 1
+[2025-12-03 08:29:58]  r/Paralegal: 15 posts, 116 comments
+[2025-12-03 08:29:58] Fetching r/LawSchool (Law) attempt 1
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:01] WARNING comments r/LawSchool: received 429 HTTP response
+[2025-12-03 08:30:26]  r/LawSchool: 54 posts, 296 comments
+[2025-12-03 08:30:26] Fetching r/LegalNews (Law) attempt 1
+[2025-12-03 08:30:37]  r/LegalNews: 16 posts, 74 comments
+[2025-12-03 08:30:40] ### DONE: 1035 posts + 6326 comments added.
+[2025-12-03 08:30:40] Total records in dataset: 154401
+[2025-12-03 01:30:40] Completed: data_collection.py
+[2025-12-03 01:30:40] --- Running Step: Semantic + Clean ---
+[2025-12-03 01:30:40] Starting script: week6_clean_and_classify.py
+[2025-12-03T08:30:57.024157] Week6: start (HF Embeddings version)
+[2025-12-03T08:30:58.690372] Loaded raw rows: 154401
+[2025-12-03T08:30:58.741386] Dropped duplicates: 0
+[2025-12-03T08:31:33.773477] Baseline saved: 143304 rows
+[2025-12-03T08:31:33.774117] Loading HuggingFace model...
+[2025-12-03T08:31:36.347028] Category prototypes embedded: ['Law', 'Construction', 'Tech']
+[2025-12-03T08:31:36.387724] Computing HF embeddings for 143304 rows...
+[2025-12-03T08:54:57.479514] Semantic cleaned saved: 0 rows
+[2025-12-03T08:54:57.491552] Week6 (HF version) completed.
+[2025-12-03 01:54:59] Completed: week6_clean_and_classify.py
+[2025-12-03 01:54:59] --- Running Step: Sentiment ---
+[2025-12-03 01:54:59] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-03 01:54:59] Starting script: data_sentiment.py
+[2025-12-03T01:55:02.647893] Starting sentiment analysis
+[2025-12-03T01:55:02.648895] Environment variable SENTIMENT_INPUT_FILE detected: data/reddit_data_semantic_clean.csv
+[2025-12-03T01:55:02.649404] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-03T01:55:02.677930] Loaded 0 rows
+[2025-12-03T01:55:03.272148] Saved output: data\reddit_data_sentiment.csv (0 rows)
+[2025-12-03T01:55:03.273149] Sentiment computation complete.
+[2025-12-03T01:55:03.273149] ============================================================
+[2025-12-03 01:55:03] Completed: data_sentiment.py
+[2025-12-03 01:55:03] --- Running Step: Indexing ---
+[2025-12-03 01:55:03] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Store Index (Week 6) ===
+Connected to Pinecone index: reddit-insights
+Sentiment rows: 0
+Unindexed IDs in tracker: 82511
+No new rows to index. Exiting.
+[2025-12-03 01:55:17] Completed: store_index.py
+[2025-12-03 01:55:17] Pipeline finished in 31.02 minutes.
+[2025-12-03 01:55:17] ================================================================================
+[2025-12-04 01:29:49] ================================================================================
+[2025-12-04 01:29:49] STARTING FULL PIPELINE
+[2025-12-04 01:29:49] ================================================================================
+[2025-12-04 01:29:49] --- Running Step: Data Collection ---
+[2025-12-04 01:29:49] Starting script: data_collection.py
+[2025-12-04 08:29:54] Starting Reddit scraper…
+[2025-12-04 08:29:54] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-04 08:30:42]  r/sysadmin: 79 posts, 544 comments
+[2025-12-04 08:30:42] Fetching r/msp (Tech) attempt 1
+[2025-12-04 08:30:53]  r/msp: 18 posts, 185 comments
+[2025-12-04 08:30:53] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-04 08:30:55]  r/talesfromtechsupport: 1 posts, 15 comments
+[2025-12-04 08:30:55] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-04 08:30:59]  r/iiiiiiitttttttttttt: 5 posts, 56 comments
+[2025-12-04 08:30:59] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-04 08:31:01]  r/techsupportgore: 1 posts, 9 comments
+[2025-12-04 08:31:01] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-04 08:31:07]  r/ITCareerQuestions: 13 posts, 78 comments
+[2025-12-04 08:31:07] Fetching r/netsec (Tech) attempt 1
+[2025-12-04 08:31:13]  r/netsec: 9 posts, 15 comments
+[2025-12-04 08:31:13] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-04 08:31:50]  r/cybersecurity: 60 posts, 273 comments
+[2025-12-04 08:31:50] Fetching r/technology (Tech) attempt 1
+[2025-12-04 08:32:42]  r/technology: 64 posts, 592 comments
+[2025-12-04 08:32:42] Fetching r/tech (Tech) attempt 1
+[2025-12-04 08:32:45]  r/tech: 2 posts, 18 comments
+[2025-12-04 08:32:45] Fetching r/gadgets (Tech) attempt 1
+[2025-12-04 08:32:51]  r/gadgets: 12 posts, 59 comments
+[2025-12-04 08:32:51] Fetching r/apple (Tech) attempt 1
+[2025-12-04 08:32:59]  r/apple: 9 posts, 100 comments
+[2025-12-04 08:32:59] Fetching r/linux (Tech) attempt 1
+[2025-12-04 08:33:09]  r/linux: 20 posts, 164 comments
+[2025-12-04 08:33:09] Fetching r/Construction (Construction) attempt 1
+[2025-12-04 08:33:24]  r/Construction: 29 posts, 261 comments
+[2025-12-04 08:33:24] Fetching r/Contractors (Construction) attempt 1
+[2025-12-04 08:33:25] No new items for r/Contractors
+[2025-12-04 08:33:25] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-04 08:34:16]  r/HomeImprovement: 100 posts, 346 comments
+[2025-12-04 08:34:16] Fetching r/DIY (Construction) attempt 1
+[2025-12-04 08:34:41]  r/DIY: 41 posts, 299 comments
+[2025-12-04 08:34:41] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-04 08:34:42] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-04 08:34:45] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-04 08:34:45] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-04 08:34:48] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-04 08:34:48] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-04 08:34:51] Fetching r/Electrical (Construction) attempt 1
+[2025-12-04 08:35:23]  r/Electrical: 66 posts, 235 comments
+[2025-12-04 08:35:23] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-04 08:36:24]  r/Plumbing: 100 posts, 332 comments
+[2025-12-04 08:36:24] Fetching r/HVAC (Construction) attempt 1
+[2025-12-04 08:36:44]  r/HVAC: 32 posts, 242 comments
+[2025-12-04 08:36:44] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-04 08:36:54]  r/AskEngineers: 16 posts, 105 comments
+[2025-12-04 08:36:54] Fetching r/legaltech (Law) attempt 1
+[2025-12-04 08:36:59]  r/legaltech: 7 posts, 56 comments
+[2025-12-04 08:36:59] Fetching r/LawFirm (Law) attempt 1
+[2025-12-04 08:37:05]  r/LawFirm: 8 posts, 51 comments
+[2025-12-04 08:37:05] Fetching r/Law (Law) attempt 1
+[2025-12-04 08:37:33]  r/Law: 43 posts, 352 comments
+[2025-12-04 08:37:33] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-04 08:38:31]  r/LegalAdvice: 100 posts, 285 comments
+[2025-12-04 08:38:31] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-04 08:39:32]  r/LegalAdviceUK: 100 posts, 630 comments
+[2025-12-04 08:39:32] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-04 08:39:59]  r/LegalAdviceCanada: 44 posts, 303 comments
+[2025-12-04 08:39:59] Fetching r/Paralegal (Law) attempt 1
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:02] WARNING comments r/Paralegal: received 429 HTTP response
+[2025-12-04 08:40:09]  r/Paralegal: 23 posts, 88 comments
+[2025-12-04 08:40:09] Fetching r/LawSchool (Law) attempt 1
+[2025-12-04 08:40:38]  r/LawSchool: 47 posts, 362 comments
+[2025-12-04 08:40:38] Fetching r/LegalNews (Law) attempt 1
+[2025-12-04 08:40:54]  r/LegalNews: 25 posts, 125 comments
+[2025-12-04 08:41:01] ### DONE: 1074 posts + 6180 comments added.
+[2025-12-04 08:41:01] Total records in dataset: 161655
+[2025-12-04 01:41:02] Completed: data_collection.py
+[2025-12-04 01:41:02] --- Running Step: Clean Data ---
+[2025-12-04 01:41:02] Starting script: data_clean.py
+[2025-12-04T08:41:04.803686] Starting baseline data_clean.py
+[2025-12-04T08:41:08.551815] Loaded raw rows: 161655
+[2025-12-04T08:41:56.326668] Saved baseline cleaned file: data\reddit_data_clean.csv with 149367 rows
+[2025-12-04T08:41:56.327683] data_clean.py finished successfully.
+[2025-12-04 01:41:56] Completed: data_clean.py
+[2025-12-04 01:41:56] --- Running Step: Semantic Classification ---
+[2025-12-04 01:41:56] Starting script: week6_clean_and_classify.py
+[2025-12-04T08:42:24.937995] Week6: start (HF Embeddings version)
+[2025-12-04T08:42:27.782674] Loaded raw rows: 161655
+[2025-12-04T08:42:27.873652] Dropped duplicates: 0
+[2025-12-04T08:45:07.658499] Baseline saved: 149367 rows
+[2025-12-04T08:45:07.659502] Loading HuggingFace model...
+[2025-12-04T08:45:11.384847] Category prototypes embedded: ['Law', 'Construction', 'Tech']
+[2025-12-04T08:45:11.442947] Computing HF embeddings for 149367 rows...
+[2025-12-04T09:25:05.101756] Semantic cleaned saved: 4451 rows
+[2025-12-04T09:25:05.109522] Week6 (HF version) completed.
+[2025-12-04 02:25:06] Completed: week6_clean_and_classify.py
+[2025-12-04 02:25:06] --- Running Step: Sentiment Analysis ---
+[2025-12-04 02:25:06] Starting script: data_sentiment.py
+[2025-12-04T09:25:10.629025] Starting sentiment analysis (semantic dataset only)
+[2025-12-04T09:25:10.630024] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-04T09:25:10.932188] Loaded 4451 rows
+[nltk_data] Error loading vader_lexicon: <urlopen error [Errno 11001]
+[nltk_data]     getaddrinfo failed>
+[2025-12-04T09:25:20.680382] Saved sentiment file: data\reddit_data_sentiment.csv (4451 rows)
+[2025-12-04T09:25:20.680382] Sentiment analysis complete.
+[2025-12-04T09:25:20.680382] ============================================================
+[2025-12-04 02:25:20] Completed: data_sentiment.py
+[2025-12-04 02:25:20] --- Running Step: Indexing to Pinecone ---
+[2025-12-04 02:25:20] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Store Index (Final Week 6) ===
+Traceback (most recent call last):
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\socket.py", line 967, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connection.py", line 753, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000022CFD30E620>: Failed to resolve 'api.pinecone.io' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\store_index.py", line 46, in <module>
+    existing = [x["name"] for x in pc.list_indexes()]
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\pinecone.py", line 387, in list_indexes
+    return self.db.index.list()
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\utils\require_kwargs.py", line 14, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\db_control\resources\sync\index.py", line 200, in list
+    response = self._index_api.list_indexes()
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\endpoint.py", line 102, in __call__
+    return self.callable(self, *args, **kwargs)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\core\openapi\db_control\api\manage_indexes_api.py", line 1161, in __list_indexes
+    return self.call_with_http_info(**kwargs)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\endpoint.py", line 134, in call_with_http_info
+    return self.api_client.call_api(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\api_client.py", line 306, in call_api
+    return self.__call_api(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\api_client.py", line 170, in __call_api
+    response_data = self.request(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\api_client.py", line 360, in request
+    return self.rest_client.GET(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\rest_utils.py", line 75, in GET
+    return self.request(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\pinecone\openapi_support\rest_urllib3.py", line 246, in request
+    r = self.pool_manager.request(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\_request_methods.py", line 135, in request
+    return self.request_encode_url(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\_request_methods.py", line 182, in request_encode_url
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\poolmanager.py", line 459, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 871, in urlopen
+    return self.urlopen(
+  [Previous line repeated 2 more times]
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.pinecone.io', port=443): Max retries exceeded with url: /indexes (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000022CFD30E620>: Failed to resolve 'api.pinecone.io' ([Errno 11001] getaddrinfo failed)"))
+[2025-12-04 02:25:43] ERROR running store_index.py
+[2025-12-04 02:25:43] Step failed: Indexing to Pinecone (continuing...)
+[2025-12-04 02:25:43] Pipeline finished in 55.91 minutes.
+[2025-12-04 02:25:43] ================================================================================
+[2025-12-05 01:57:31] ================================================================================
+[2025-12-05 01:57:31] STARTING FULL PIPELINE
+[2025-12-05 01:57:31] ================================================================================
+[2025-12-05 01:57:31] --- Running Step: Data Collection ---
+[2025-12-05 01:57:31] Starting script: data_collection.py
+[2025-12-05 08:57:37] Starting Reddit scraper…
+[2025-12-05 08:57:37] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-05 08:58:00]  r/sysadmin: 60 posts, 491 comments
+[2025-12-05 08:58:00] Fetching r/msp (Tech) attempt 1
+[2025-12-05 08:58:07]  r/msp: 18 posts, 157 comments
+[2025-12-05 08:58:07] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-05 08:58:09] No new items for r/talesfromtechsupport
+[2025-12-05 08:58:09] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-05 08:58:11]  r/iiiiiiitttttttttttt: 3 posts, 33 comments
+[2025-12-05 08:58:11] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-05 08:58:13]  r/techsupportgore: 1 posts, 3 comments
+[2025-12-05 08:58:13] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-05 08:58:19]  r/ITCareerQuestions: 20 posts, 134 comments
+[2025-12-05 08:58:19] Fetching r/netsec (Tech) attempt 1
+[2025-12-05 08:58:21]  r/netsec: 6 posts, 6 comments
+[2025-12-05 08:58:21] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-05 08:58:33]  r/cybersecurity: 64 posts, 278 comments
+[2025-12-05 08:58:33] Fetching r/technology (Tech) attempt 1
+[2025-12-05 08:59:02]  r/technology: 59 posts, 524 comments
+[2025-12-05 08:59:02] Fetching r/tech (Tech) attempt 1
+[2025-12-05 08:59:03]  r/tech: 1 posts, 15 comments
+[2025-12-05 08:59:03] Fetching r/gadgets (Tech) attempt 1
+[2025-12-05 08:59:08]  r/gadgets: 6 posts, 65 comments
+[2025-12-05 08:59:08] Fetching r/apple (Tech) attempt 1
+[2025-12-05 08:59:16]  r/apple: 9 posts, 97 comments
+[2025-12-05 08:59:16] Fetching r/linux (Tech) attempt 1
+[2025-12-05 08:59:24]  r/linux: 19 posts, 134 comments
+[2025-12-05 08:59:24] Fetching r/Construction (Construction) attempt 1
+[2025-12-05 08:59:38]  r/Construction: 41 posts, 245 comments
+[2025-12-05 08:59:38] Fetching r/Contractors (Construction) attempt 1
+[2025-12-05 08:59:38] No new items for r/Contractors
+[2025-12-05 08:59:38] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-05 09:00:03]  r/HomeImprovement: 100 posts, 423 comments
+[2025-12-05 09:00:03] Fetching r/DIY (Construction) attempt 1
+[2025-12-05 09:00:28]  r/DIY: 39 posts, 205 comments
+[2025-12-05 09:00:28] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-05 09:00:29] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-05 09:00:32] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-05 09:00:32] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-05 09:00:35] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-05 09:00:35] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-05 09:00:38] Fetching r/Electrical (Construction) attempt 1
+[2025-12-05 09:01:04]  r/Electrical: 56 posts, 343 comments
+[2025-12-05 09:01:04] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-05 09:02:09]  r/Plumbing: 100 posts, 382 comments
+[2025-12-05 09:02:09] Fetching r/HVAC (Construction) attempt 1
+[2025-12-05 09:02:17]  r/HVAC: 20 posts, 193 comments
+[2025-12-05 09:02:17] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-05 09:02:24]  r/AskEngineers: 11 posts, 51 comments
+[2025-12-05 09:02:24] Fetching r/legaltech (Law) attempt 1
+[2025-12-05 09:02:27]  r/legaltech: 4 posts, 20 comments
+[2025-12-05 09:02:27] Fetching r/LawFirm (Law) attempt 1
+[2025-12-05 09:02:32]  r/LawFirm: 7 posts, 42 comments
+[2025-12-05 09:02:32] Fetching r/Law (Law) attempt 1
+[2025-12-05 09:03:03]  r/Law: 49 posts, 447 comments
+[2025-12-05 09:03:03] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-05 09:04:03]  r/LegalAdvice: 100 posts, 220 comments
+[2025-12-05 09:04:03] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-05 09:05:03]  r/LegalAdviceUK: 100 posts, 807 comments
+[2025-12-05 09:05:03] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-05 09:05:29]  r/LegalAdviceCanada: 41 posts, 392 comments
+[2025-12-05 09:05:29] Fetching r/Paralegal (Law) attempt 1
+[2025-12-05 09:05:40]  r/Paralegal: 19 posts, 106 comments
+[2025-12-05 09:05:40] Fetching r/LawSchool (Law) attempt 1
+[2025-12-05 09:06:21]  r/LawSchool: 67 posts, 455 comments
+[2025-12-05 09:06:21] Fetching r/LegalNews (Law) attempt 1
+[2025-12-05 09:06:35]  r/LegalNews: 22 posts, 105 comments
+[2025-12-05 09:06:38] ### DONE: 1042 posts + 6373 comments added.
+[2025-12-05 09:06:38] Total records in dataset: 169070
+[2025-12-05 02:06:38] Completed: data_collection.py
+[2025-12-05 02:06:38] --- Running Step: Clean Data ---
+[2025-12-05 02:06:38] Starting script: data_clean.py
+[2025-12-05T09:06:40.161631] Starting baseline data_clean.py
+[2025-12-05T09:06:42.564088] Loaded raw rows: 169070
+[2025-12-05T09:07:11.752725] Saved baseline cleaned file: data\reddit_data_clean.csv with 156332 rows
+[2025-12-05T09:07:11.753233] data_clean.py finished successfully.
+[2025-12-05 02:07:11] Completed: data_clean.py
+[2025-12-05 02:07:11] --- Running Step: Semantic Classification ---
+[2025-12-05 02:07:11] Starting script: week6_clean_and_classify.py
+[2025-12-05T09:07:27.951925] Week6: start (HF Embeddings version)
+[2025-12-05T09:07:30.502595] Loaded raw rows: 169070
+[2025-12-05T09:07:30.581869] Dropped duplicates: 0
+[2025-12-05T09:09:12.832201] Baseline saved: 156332 rows
+[2025-12-05T09:09:12.832706] Loading HuggingFace model...
+[2025-12-05T09:09:15.438391] Category prototypes embedded: ['Law', 'Construction', 'Tech']
+[2025-12-05T09:09:15.482633] Computing HF embeddings for 156332 rows...
+[2025-12-05T09:32:37.597379] Semantic cleaned saved: 4601 rows
+[2025-12-05T09:32:37.608215] Week6 (HF version) completed.
+[2025-12-05 02:32:39] Completed: week6_clean_and_classify.py
+[2025-12-05 02:32:39] --- Running Step: Sentiment Analysis ---
+[2025-12-05 02:32:39] Starting script: data_sentiment.py
+[2025-12-05T09:32:43.440325] Starting sentiment analysis (semantic dataset only)
+[2025-12-05T09:32:43.441325] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-05T09:32:43.703307] Loaded 4601 rows
+[2025-12-05T09:32:54.122437] Saved sentiment file: data\reddit_data_sentiment.csv (4601 rows)
+[2025-12-05T09:32:54.123437] Sentiment analysis complete.
+[2025-12-05T09:32:54.123437] ============================================================
+[2025-12-05 02:32:54] Completed: data_sentiment.py
+[2025-12-05 02:32:54] --- Running Step: Indexing to Pinecone ---
+[2025-12-05 02:32:54] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Store Index (Final Week 6) ===
+Connected to Pinecone index: reddit-insights
+Rows in sentiment file: 4601
+Unindexed IDs in tracker: 96712
+Preparing 332 documents for indexing...
+Generated 529 chunks.
+Initializing OpenAI embeddings (text-embedding-3-small)...
+Uploading vectors to Pinecone...
+Upload complete — marking rows as indexed...
+Indexed 332 new documents.
+=== Store Index Finished ===
+[2025-12-05 02:33:28] Completed: store_index.py
+[2025-12-05 02:33:28] Pipeline finished in 35.95 minutes.
+[2025-12-05 02:33:28] ================================================================================
+[2025-12-05 03:55:16] ================================================================================
+[2025-12-05 03:55:16] STARTING FULL PIPELINE
+[2025-12-05 03:55:16] ================================================================================
+[2025-12-05 03:55:16] --- Running Step: Data Collection ---
+[2025-12-05 03:55:16] Starting script: data_collection.py
+[2025-12-05 10:55:20] Starting Reddit scraper…
+[2025-12-05 10:55:20] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-05 10:55:27]  r/sysadmin: 16 posts, 67 comments
+[2025-12-05 10:55:27] Fetching r/msp (Tech) attempt 1
+[2025-12-05 10:55:28]  r/msp: 2 posts, 1 comments
+[2025-12-05 10:55:28] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-05 10:55:29] No new items for r/talesfromtechsupport
+[2025-12-05 10:55:29] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-05 10:55:31]  r/iiiiiiitttttttttttt: 1 posts, 15 comments
+[2025-12-05 10:55:31] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-05 10:55:33] No new items for r/techsupportgore
+[2025-12-05 10:55:33] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-05 10:55:34] No new items for r/ITCareerQuestions
+[2025-12-05 10:55:34] Fetching r/netsec (Tech) attempt 1
+[2025-12-05 10:55:35] No new items for r/netsec
+[2025-12-05 10:55:35] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-05 10:55:37]  r/cybersecurity: 4 posts, 13 comments
+[2025-12-05 10:55:37] Fetching r/technology (Tech) attempt 1
+[2025-12-05 10:55:40]  r/technology: 6 posts, 34 comments
+[2025-12-05 10:55:40] Fetching r/tech (Tech) attempt 1
+[2025-12-05 10:55:41] No new items for r/tech
+[2025-12-05 10:55:41] Fetching r/gadgets (Tech) attempt 1
+[2025-12-05 10:55:42] No new items for r/gadgets
+[2025-12-05 10:55:42] Fetching r/apple (Tech) attempt 1
+[2025-12-05 10:55:43] No new items for r/apple
+[2025-12-05 10:55:43] Fetching r/linux (Tech) attempt 1
+[2025-12-05 10:55:45]  r/linux: 1 posts, 2 comments
+[2025-12-05 10:55:45] Fetching r/Construction (Construction) attempt 1
+[2025-12-05 10:55:47] No new items for r/Construction
+[2025-12-05 10:55:47] Fetching r/Contractors (Construction) attempt 1
+[2025-12-05 10:55:47] No new items for r/Contractors
+[2025-12-05 10:55:47] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-05 10:55:49]  r/HomeImprovement: 5 posts, 8 comments
+[2025-12-05 10:55:49] Fetching r/DIY (Construction) attempt 1
+[2025-12-05 10:55:51]  r/DIY: 2 posts, 7 comments
+[2025-12-05 10:55:51] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-05 10:55:51] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-05 10:55:54] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-05 10:55:54] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-05 10:55:57] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-05 10:55:57] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-05 10:56:00] Fetching r/Electrical (Construction) attempt 1
+[2025-12-05 10:56:04]  r/Electrical: 4 posts, 11 comments
+[2025-12-05 10:56:04] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-05 10:56:07]  r/Plumbing: 5 posts, 1 comments
+[2025-12-05 10:56:07] Fetching r/HVAC (Construction) attempt 1
+[2025-12-05 10:56:08] No new items for r/HVAC
+[2025-12-05 10:56:08] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-05 10:56:10]  r/AskEngineers: 1 posts, 0 comments
+[2025-12-05 10:56:10] Fetching r/legaltech (Law) attempt 1
+[2025-12-05 10:56:11] No new items for r/legaltech
+[2025-12-05 10:56:11] Fetching r/LawFirm (Law) attempt 1
+[2025-12-05 10:56:12] No new items for r/LawFirm
+[2025-12-05 10:56:12] Fetching r/Law (Law) attempt 1
+[2025-12-05 10:56:14] No new items for r/Law
+[2025-12-05 10:56:14] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-05 10:56:15]  r/LegalAdvice: 2 posts, 1 comments
+[2025-12-05 10:56:15] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-05 10:56:21]  r/LegalAdviceUK: 14 posts, 78 comments
+[2025-12-05 10:56:21] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-05 10:56:22]  r/LegalAdviceCanada: 1 posts, 1 comments
+[2025-12-05 10:56:22] Fetching r/Paralegal (Law) attempt 1
+[2025-12-05 10:56:23] No new items for r/Paralegal
+[2025-12-05 10:56:23] Fetching r/LawSchool (Law) attempt 1
+[2025-12-05 10:56:25]  r/LawSchool: 3 posts, 4 comments
+[2025-12-05 10:56:25] Fetching r/LegalNews (Law) attempt 1
+[2025-12-05 10:56:27]  r/LegalNews: 1 posts, 2 comments
+[2025-12-05 10:56:30] ### DONE: 68 posts + 245 comments added.
+[2025-12-05 10:56:30] Total records in dataset: 169383
+[2025-12-05 03:56:30] Completed: data_collection.py
+[2025-12-05 03:56:30] --- Running Step: Clean Data ---
+[2025-12-05 03:56:30] Starting script: data_clean.py
+[2025-12-05T10:56:31.195837] Starting baseline cleaning
+[2025-12-05T10:56:33.257342] Loaded raw rows: 169383
+[2025-12-05T10:56:33.316359] Dropped duplicates: 0
+Traceback (most recent call last):
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\data_clean.py", line 95, in <module>
+    main()
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\data_clean.py", line 91, in main
+    log(f"Saved cleaned {len(df_clean)} rows \u2192 {OUTPUT_FILE}")
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\data_clean.py", line 25, in log
+    print(f"[{ts}] {msg}", flush=True)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 55: character maps to <undefined>
+[2025-12-05 03:56:55] ERROR running data_clean.py
+[2025-12-05 03:56:55] Step failed: Clean Data (continuing...)
+[2025-12-05 03:56:55] --- Running Step: Semantic Classification ---
+[2025-12-05 03:56:55] Starting script: week6_clean_and_classify.py
+[2025-12-05T10:57:07.877884] Week 6 Semantic Classification — START
+[2025-12-05T10:57:09.768941] Loaded raw rows: 169383
+[2025-12-05T10:57:09.836941] Dropped duplicates: 0
+Traceback (most recent call last):
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\week6_clean_and_classify.py", line 227, in <module>
+    main()
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\week6_clean_and_classify.py", line 144, in main
+    log(f"Baseline cleaned: {len(baseline_df)} rows \u2192 {BASELINE_OUT}")
+  File "C:\Users\jonis\Documents\class\MSDS692_X40_Data Science Practicum II RE\week6_clean_and_classify.py", line 43, in log
+    print(line, flush=True)
+  File "C:\Users\jonis\anaconda3\envs\reditbot\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 59: character maps to <undefined>
+[2025-12-05 03:57:39] ERROR running week6_clean_and_classify.py
+[2025-12-05 03:57:39] Step failed: Semantic Classification (continuing...)
+[2025-12-05 03:57:39] --- Running Step: Sentiment Analysis ---
+[2025-12-05 03:57:39] Starting script: data_sentiment.py
+[2025-12-05T10:57:46.030999] Starting sentiment analysis (semantic dataset only)
+[2025-12-05T10:57:46.032001] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-05T10:57:46.516810] Loaded 4601 rows
+[2025-12-05T10:58:00.025268] Saved sentiment file: data\reddit_data_sentiment.csv (4601 rows)
+[2025-12-05T10:58:00.026275] Sentiment analysis complete.
+[2025-12-05T10:58:00.027270] ============================================================
+[2025-12-05 03:58:00] Completed: data_sentiment.py
+[2025-12-05 03:58:00] --- Running Step: Indexing to Pinecone ---
+[2025-12-05 03:58:00] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Starting Pinecone Indexing (Final Version) ===
+Connected to Pinecone index: reddit-insights
+Rows in sentiment dataset: 4601
+Unindexed IDs in tracker DB: 96693
+No new rows to index — exiting.
+[2025-12-05 03:58:13] Completed: store_index.py
+[2025-12-05 03:58:13] Pipeline finished in 2.95 minutes.
+[2025-12-05 03:58:13] ================================================================================
+[2025-12-05 04:33:18] ================================================================================
+[2025-12-05 04:33:18] STARTING FULL PIPELINE
+[2025-12-05 04:33:18] ================================================================================
+[2025-12-05 04:33:18] --- Running Step: Data Collection ---
+[2025-12-05 04:33:18] Starting script: data_collection.py
+[2025-12-05 11:33:20] Starting Reddit scraper…
+[2025-12-05 11:33:20] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-05 11:33:23]  r/sysadmin: 1 posts, 2 comments
+[2025-12-05 11:33:23] Fetching r/msp (Tech) attempt 1
+[2025-12-05 11:33:25] No new items for r/msp
+[2025-12-05 11:33:25] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-05 11:33:26] No new items for r/talesfromtechsupport
+[2025-12-05 11:33:26] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-05 11:33:28]  r/iiiiiiitttttttttttt: 1 posts, 2 comments
+[2025-12-05 11:33:28] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-05 11:33:29] No new items for r/techsupportgore
+[2025-12-05 11:33:29] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-05 11:33:30] No new items for r/ITCareerQuestions
+[2025-12-05 11:33:30] Fetching r/netsec (Tech) attempt 1
+[2025-12-05 11:33:31] No new items for r/netsec
+[2025-12-05 11:33:31] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-05 11:33:32]  r/cybersecurity: 1 posts, 4 comments
+[2025-12-05 11:33:32] Fetching r/technology (Tech) attempt 1
+[2025-12-05 11:33:34]  r/technology: 2 posts, 2 comments
+[2025-12-05 11:33:34] Fetching r/tech (Tech) attempt 1
+[2025-12-05 11:33:35] No new items for r/tech
+[2025-12-05 11:33:35] Fetching r/gadgets (Tech) attempt 1
+[2025-12-05 11:33:36] No new items for r/gadgets
+[2025-12-05 11:33:36] Fetching r/apple (Tech) attempt 1
+[2025-12-05 11:33:38] No new items for r/apple
+[2025-12-05 11:33:38] Fetching r/linux (Tech) attempt 1
+[2025-12-05 11:33:39]  r/linux: 1 posts, 0 comments
+[2025-12-05 11:33:39] Fetching r/Construction (Construction) attempt 1
+[2025-12-05 11:33:41] No new items for r/Construction
+[2025-12-05 11:33:41] Fetching r/Contractors (Construction) attempt 1
+[2025-12-05 11:33:41] No new items for r/Contractors
+[2025-12-05 11:33:41] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-05 11:33:42] No new items for r/HomeImprovement
+[2025-12-05 11:33:42] Fetching r/DIY (Construction) attempt 1
+[2025-12-05 11:33:44] No new items for r/DIY
+[2025-12-05 11:33:44] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-05 11:33:44] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-05 11:33:47] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-05 11:33:47] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-05 11:33:50] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-05 11:33:50] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-05 11:33:53] Fetching r/Electrical (Construction) attempt 1
+[2025-12-05 11:33:55] No new items for r/Electrical
+[2025-12-05 11:33:55] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-05 11:33:56]  r/Plumbing: 1 posts, 0 comments
+[2025-12-05 11:33:56] Fetching r/HVAC (Construction) attempt 1
+[2025-12-05 11:33:58] No new items for r/HVAC
+[2025-12-05 11:33:58] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-05 11:34:00] No new items for r/AskEngineers
+[2025-12-05 11:34:00] Fetching r/legaltech (Law) attempt 1
+[2025-12-05 11:34:01] No new items for r/legaltech
+[2025-12-05 11:34:01] Fetching r/LawFirm (Law) attempt 1
+[2025-12-05 11:34:03] No new items for r/LawFirm
+[2025-12-05 11:34:03] Fetching r/Law (Law) attempt 1
+[2025-12-05 11:34:04]  r/Law: 1 posts, 1 comments
+[2025-12-05 11:34:04] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-05 11:34:05]  r/LegalAdvice: 1 posts, 2 comments
+[2025-12-05 11:34:05] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-05 11:34:07]  r/LegalAdviceUK: 3 posts, 6 comments
+[2025-12-05 11:34:07] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-05 11:34:08] No new items for r/LegalAdviceCanada
+[2025-12-05 11:34:08] Fetching r/Paralegal (Law) attempt 1
+[2025-12-05 11:34:09] No new items for r/Paralegal
+[2025-12-05 11:34:09] Fetching r/LawSchool (Law) attempt 1
+[2025-12-05 11:34:11] No new items for r/LawSchool
+[2025-12-05 11:34:11] Fetching r/LegalNews (Law) attempt 1
+[2025-12-05 11:34:12]  r/LegalNews: 1 posts, 1 comments
+[2025-12-05 11:34:14] ### DONE: 13 posts + 20 comments added.
+[2025-12-05 11:34:14] Total records in dataset: 169416
+[2025-12-05 04:34:15] Completed: data_collection.py
+[2025-12-05 04:34:15] --- Running Step: Clean + Semantic ---
+[2025-12-05 04:34:15] Starting script: data_clean_and_classify.py
+[2025-12-05T11:34:26.858144] Week 6: start combined cleaning + semantic classification
+[2025-12-05T11:34:28.768106] Loaded raw rows: 169416
+[2025-12-05T11:34:28.827477] Dropped duplicates by id: 0
+[2025-12-05T11:37:45.347765] Baseline cleaned: 156634 rows -> data\reddit_data_clean.csv
+[2025-12-05T11:37:45.348730] Loading HuggingFace model: sentence-transformers/all-MiniLM-L6-v2
+[2025-12-05T11:37:47.813234] Prepared prototype embeddings for categories: ['Law', 'Construction', 'Tech', 'Productivity', 'CRM_Billing', 'Security_Others']
+[2025-12-05T11:37:47.934050] Computing embeddings for 156634 baseline rows...
+[2025-12-05T12:06:08.759437] Computed embeddings for 156634 rows.
+[2025-12-05T12:06:38.570028] Semantic cleaned saved: 8225 rows -> data\reddit_data_semantic_clean.csv
+[2025-12-05T12:06:38.581818] Audit saved to data\clean_data_audit.json
+[2025-12-05T12:06:38.581818] Week 6: finished successfully.
+[2025-12-05 05:06:41] Completed: data_clean_and_classify.py
+[2025-12-05 05:06:41] --- Running Step: Sentiment ---
+[2025-12-05 05:06:41] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-05 05:06:41] Starting script: data_sentiment.py
+[2025-12-05T12:06:48.042700] Starting sentiment analysis (semantic dataset only)
+[2025-12-05T12:06:48.044707] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-05T12:06:49.083181] Loaded 8225 rows
+[2025-12-05T12:07:04.446748] Saved sentiment file: data\reddit_data_sentiment.csv (8225 rows)
+[2025-12-05T12:07:04.446748] Sentiment analysis complete.
+[2025-12-05T12:07:04.448754] ============================================================
+[2025-12-05 05:07:04] Completed: data_sentiment.py
+[2025-12-05 05:07:04] --- Running Step: Indexing ---
+[2025-12-05 05:07:04] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Starting Pinecone Indexing ===
+Connected to Pinecone index: reddit-insights
+Rows in sentiment file: 8225
+Unindexed IDs in tracker DB: 33
+No new rows to index. Exiting.
+[2025-12-05 05:07:17] Completed: store_index.py
+[2025-12-05 05:07:17] Pipeline finished in 33.99 minutes.
+[2025-12-05 05:07:17] ================================================================================
+[2025-12-06 01:36:47] ================================================================================
+[2025-12-06 01:36:47] STARTING FULL PIPELINE
+[2025-12-06 01:36:47] ================================================================================
+[2025-12-06 01:36:47] --- Running Step: Data Collection ---
+[2025-12-06 01:36:47] Starting script: data_collection.py
+[2025-12-06 08:36:52] Starting Reddit scraper…
+[2025-12-06 08:36:52] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-06 08:37:13]  r/sysadmin: 56 posts, 421 comments
+[2025-12-06 08:37:13] Fetching r/msp (Tech) attempt 1
+[2025-12-06 08:37:18]  r/msp: 11 posts, 97 comments
+[2025-12-06 08:37:18] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-06 08:37:20]  r/talesfromtechsupport: 1 posts, 11 comments
+[2025-12-06 08:37:20] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-06 08:37:24]  r/iiiiiiitttttttttttt: 9 posts, 95 comments
+[2025-12-06 08:37:24] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-06 08:37:25] No new items for r/techsupportgore
+[2025-12-06 08:37:25] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-06 08:37:31]  r/ITCareerQuestions: 16 posts, 120 comments
+[2025-12-06 08:37:31] Fetching r/netsec (Tech) attempt 1
+[2025-12-06 08:37:32]  r/netsec: 4 posts, 9 comments
+[2025-12-06 08:37:32] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-06 08:37:39]  r/cybersecurity: 26 posts, 118 comments
+[2025-12-06 08:37:39] Fetching r/technology (Tech) attempt 1
+[2025-12-06 08:38:07]  r/technology: 43 posts, 443 comments
+[2025-12-06 08:38:07] Fetching r/tech (Tech) attempt 1
+[2025-12-06 08:38:08]  r/tech: 2 posts, 18 comments
+[2025-12-06 08:38:08] Fetching r/gadgets (Tech) attempt 1
+[2025-12-06 08:38:10]  r/gadgets: 3 posts, 31 comments
+[2025-12-06 08:38:10] Fetching r/apple (Tech) attempt 1
+[2025-12-06 08:38:15]  r/apple: 6 posts, 61 comments
+[2025-12-06 08:38:15] Fetching r/linux (Tech) attempt 1
+[2025-12-06 08:38:23]  r/linux: 16 posts, 142 comments
+[2025-12-06 08:38:23] Fetching r/Construction (Construction) attempt 1
+[2025-12-06 08:38:37]  r/Construction: 26 posts, 215 comments
+[2025-12-06 08:38:37] Fetching r/Contractors (Construction) attempt 1
+[2025-12-06 08:38:38] No new items for r/Contractors
+[2025-12-06 08:38:38] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-06 08:39:01]  r/HomeImprovement: 99 posts, 416 comments
+[2025-12-06 08:39:01] Fetching r/DIY (Construction) attempt 1
+[2025-12-06 08:39:13]  r/DIY: 38 posts, 317 comments
+[2025-12-06 08:39:13] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-06 08:39:13] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-06 08:39:16] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-06 08:39:16] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-06 08:39:19] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-06 08:39:20] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-06 08:39:23] Fetching r/Electrical (Construction) attempt 1
+[2025-12-06 08:39:36]  r/Electrical: 46 posts, 244 comments
+[2025-12-06 08:39:36] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-06 08:39:59]  r/Plumbing: 100 posts, 377 comments
+[2025-12-06 08:39:59] Fetching r/HVAC (Construction) attempt 1
+[2025-12-06 08:40:12]  r/HVAC: 21 posts, 199 comments
+[2025-12-06 08:40:12] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-06 08:40:18]  r/AskEngineers: 8 posts, 33 comments
+[2025-12-06 08:40:18] Fetching r/legaltech (Law) attempt 1
+[2025-12-06 08:40:20]  r/legaltech: 3 posts, 23 comments
+[2025-12-06 08:40:20] Fetching r/LawFirm (Law) attempt 1
+[2025-12-06 08:40:23]  r/LawFirm: 4 posts, 36 comments
+[2025-12-06 08:40:23] Fetching r/Law (Law) attempt 1
+[2025-12-06 08:40:58]  r/Law: 55 posts, 455 comments
+[2025-12-06 08:40:58] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-06 08:41:56]  r/LegalAdvice: 100 posts, 319 comments
+[2025-12-06 08:41:56] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-06 08:42:54]  r/LegalAdviceUK: 93 posts, 694 comments
+[2025-12-06 08:42:54] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-06 08:43:21]  r/LegalAdviceCanada: 44 posts, 324 comments
+[2025-12-06 08:43:21] Fetching r/Paralegal (Law) attempt 1
+[2025-12-06 08:43:29]  r/Paralegal: 13 posts, 91 comments
+[2025-12-06 08:43:29] Fetching r/LawSchool (Law) attempt 1
+[2025-12-06 08:44:04]  r/LawSchool: 57 posts, 364 comments
+[2025-12-06 08:44:04] Fetching r/LegalNews (Law) attempt 1
+[2025-12-06 08:44:16]  r/LegalNews: 20 posts, 48 comments
+[2025-12-06 08:44:19] ### DONE: 920 posts + 5721 comments added.
+[2025-12-06 08:44:19] Total records in dataset: 176057
+[2025-12-06 01:44:19] Completed: data_collection.py
+[2025-12-06 01:44:19] --- Running Step: Clean + Semantic ---
+[2025-12-06 01:44:19] Starting script: data_clean_and_classify.py
+[2025-12-06T08:44:37.083250] Week 6: start combined cleaning + semantic classification
+[2025-12-06T08:44:38.990739] Loaded raw rows: 176057
+[2025-12-06T08:44:39.058889] Dropped duplicates by id: 0
+[2025-12-06T08:48:17.932392] Baseline cleaned: 162829 rows -> data\reddit_data_clean.csv
+[2025-12-06T08:48:17.933392] Loading HuggingFace model: sentence-transformers/all-MiniLM-L6-v2
+[2025-12-06T08:48:20.176922] Prepared prototype embeddings for categories: ['Law', 'Construction', 'Tech', 'Productivity', 'CRM_Billing', 'Security_Others']
+[2025-12-06T08:48:20.282466] Computing embeddings for 162829 baseline rows...
+[2025-12-06T09:12:51.812894] Computed embeddings for 162829 rows.
+[2025-12-06T09:13:09.005501] Semantic cleaned saved: 8492 rows -> data\reddit_data_semantic_clean.csv
+[2025-12-06T09:13:09.017080] Audit saved to data\clean_data_audit.json
+[2025-12-06T09:13:09.017080] Week 6: finished successfully.
+[2025-12-06 02:13:11] Completed: data_clean_and_classify.py
+[2025-12-06 02:13:11] --- Running Step: Sentiment ---
+[2025-12-06 02:13:11] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-06 02:13:11] Starting script: data_sentiment.py
+[2025-12-06T09:13:15.962253] Starting sentiment analysis (semantic dataset only)
+[2025-12-06T09:13:15.965074] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-06T09:13:16.478092] Loaded 8492 rows
+[2025-12-06T09:13:30.945604] Saved sentiment file: data\reddit_data_sentiment.csv (8492 rows)
+[2025-12-06T09:13:30.947609] Sentiment analysis complete.
+[2025-12-06T09:13:30.947609] ============================================================
+[2025-12-06 02:13:31] Completed: data_sentiment.py
+[2025-12-06 02:13:31] --- Running Step: Indexing ---
+[2025-12-06 02:13:31] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Starting Pinecone Indexing ===
+Connected to Pinecone index: reddit-insights
+Rows in sentiment file: 8492
+Unindexed IDs in tracker DB: 6674
+Preparing 267 documents for indexing...
+Generated 436 chunks.
+Initializing OpenAI embeddings (text-embedding-3-small)...
+Uploading vectors to Pinecone...
+Upload complete — marking originals as indexed...
+Indexed 267 original documents.
+=== Pinecone indexing finished ===
+[2025-12-06 02:13:57] Completed: store_index.py
+[2025-12-06 02:13:57] Pipeline finished in 37.18 minutes.
+[2025-12-06 02:13:57] ================================================================================
+[2025-12-06 13:50:03] ================================================================================
+[2025-12-06 13:50:03] STARTING FULL PIPELINE
+[2025-12-06 13:50:03] ================================================================================
+[2025-12-06 13:50:03] --- Running Step: Data Collection ---
+[2025-12-06 13:50:03] Starting script: data_collection.py
+[2025-12-06 20:50:09] Starting Reddit scraper…
+[2025-12-06 20:50:09] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-06 20:50:16]  r/sysadmin: 11 posts, 82 comments
+[2025-12-06 20:50:16] Fetching r/msp (Tech) attempt 1
+[2025-12-06 20:50:22]  r/msp: 5 posts, 67 comments
+[2025-12-06 20:50:22] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-06 20:50:23] No new items for r/talesfromtechsupport
+[2025-12-06 20:50:23] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-06 20:50:26]  r/iiiiiiitttttttttttt: 3 posts, 23 comments
+[2025-12-06 20:50:26] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-06 20:50:28]  r/techsupportgore: 1 posts, 11 comments
+[2025-12-06 20:50:28] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-06 20:50:31]  r/ITCareerQuestions: 7 posts, 34 comments
+[2025-12-06 20:50:31] Fetching r/netsec (Tech) attempt 1
+[2025-12-06 20:50:32] No new items for r/netsec
+[2025-12-06 20:50:32] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-06 20:50:39]  r/cybersecurity: 19 posts, 65 comments
+[2025-12-06 20:50:39] Fetching r/technology (Tech) attempt 1
+[2025-12-06 20:50:56]  r/technology: 19 posts, 207 comments
+[2025-12-06 20:50:56] Fetching r/tech (Tech) attempt 1
+[2025-12-06 20:50:57]  r/tech: 1 posts, 15 comments
+[2025-12-06 20:50:57] Fetching r/gadgets (Tech) attempt 1
+[2025-12-06 20:50:59]  r/gadgets: 1 posts, 15 comments
+[2025-12-06 20:50:59] Fetching r/apple (Tech) attempt 1
+[2025-12-06 20:51:02]  r/apple: 2 posts, 21 comments
+[2025-12-06 20:51:02] Fetching r/linux (Tech) attempt 1
+[2025-12-06 20:51:07]  r/linux: 10 posts, 50 comments
+[2025-12-06 20:51:07] Fetching r/Construction (Construction) attempt 1
+[2025-12-06 20:51:13]  r/Construction: 11 posts, 92 comments
+[2025-12-06 20:51:13] Fetching r/Contractors (Construction) attempt 1
+[2025-12-06 20:51:14] No new items for r/Contractors
+[2025-12-06 20:51:14] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-06 20:51:32]  r/HomeImprovement: 47 posts, 151 comments
+[2025-12-06 20:51:32] Fetching r/DIY (Construction) attempt 1
+[2025-12-06 20:51:45]  r/DIY: 21 posts, 102 comments
+[2025-12-06 20:51:45] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-06 20:51:45] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-06 20:51:48] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-06 20:51:48] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-06 20:51:51] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-06 20:51:51] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-06 20:51:54] Fetching r/Electrical (Construction) attempt 1
+[2025-12-06 20:52:00]  r/Electrical: 16 posts, 80 comments
+[2025-12-06 20:52:00] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-06 20:52:52]  r/Plumbing: 91 posts, 295 comments
+[2025-12-06 20:52:52] Fetching r/HVAC (Construction) attempt 1
+[2025-12-06 20:52:57]  r/HVAC: 6 posts, 52 comments
+[2025-12-06 20:52:57] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-06 20:53:00]  r/AskEngineers: 5 posts, 39 comments
+[2025-12-06 20:53:00] Fetching r/legaltech (Law) attempt 1
+[2025-12-06 20:53:03]  r/legaltech: 2 posts, 6 comments
+[2025-12-06 20:53:03] Fetching r/LawFirm (Law) attempt 1
+[2025-12-06 20:53:05]  r/LawFirm: 2 posts, 15 comments
+[2025-12-06 20:53:05] Fetching r/Law (Law) attempt 1
+[2025-12-06 20:53:11]  r/Law: 12 posts, 101 comments
+[2025-12-06 20:53:11] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-06 20:54:04]  r/LegalAdvice: 87 posts, 285 comments
+[2025-12-06 20:54:04] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-06 20:54:43]  r/LegalAdviceUK: 65 posts, 455 comments
+[2025-12-06 20:54:43] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-06 20:54:54]  r/LegalAdviceCanada: 17 posts, 91 comments
+[2025-12-06 20:54:54] Fetching r/Paralegal (Law) attempt 1
+[2025-12-06 20:54:59]  r/Paralegal: 6 posts, 37 comments
+[2025-12-06 20:54:59] Fetching r/LawSchool (Law) attempt 1
+[2025-12-06 20:55:17]  r/LawSchool: 30 posts, 154 comments
+[2025-12-06 20:55:17] Fetching r/LegalNews (Law) attempt 1
+[2025-12-06 20:55:22]  r/LegalNews: 7 posts, 22 comments
+[2025-12-06 20:55:27] ### DONE: 504 posts + 2567 comments added.
+[2025-12-06 20:55:27] Total records in dataset: 179128
+[2025-12-06 13:55:27] Completed: data_collection.py
+[2025-12-06 13:55:27] --- Running Step: Clean + Semantic ---
+[2025-12-06 13:55:27] Starting script: data_clean_and_classify.py
+[2025-12-06T20:55:46.448065] Week 6: start combined cleaning + semantic classification
+[2025-12-06T20:55:48.918770] Loaded raw rows: 179128
+[2025-12-06T20:55:49.016355] Dropped duplicates by id: 0
+[2025-12-06T20:59:44.670527] Baseline cleaned: 165706 rows -> data\reddit_data_clean.csv
+[2025-12-06T20:59:44.671527] Loading HuggingFace model: sentence-transformers/all-MiniLM-L6-v2
+[2025-12-06T20:59:47.247088] Prepared prototype embeddings for categories: ['Law', 'Construction', 'Tech', 'Productivity', 'CRM_Billing', 'Security_Others']
+[2025-12-06T20:59:47.368936] Computing embeddings for 165706 baseline rows...
+[2025-12-06T21:25:27.682129] Computed embeddings for 165706 rows.
+[2025-12-06T21:25:50.806095] Semantic cleaned saved: 13408 rows -> data\reddit_data_semantic_clean.csv
+[2025-12-06T21:25:51.324337] Audit saved to data\clean_data_audit.json
+[2025-12-06T21:25:51.324337] Week 6: finished successfully.
+[2025-12-06 14:26:24] Completed: data_clean_and_classify.py
+[2025-12-06 14:26:24] --- Running Step: Sentiment ---
+[2025-12-06 14:26:24] Injected SENTIMENT_INPUT_FILE=data/reddit_data_semantic_clean.csv
+[2025-12-06 14:26:24] Starting script: data_sentiment.py
+[2025-12-06T21:26:40.229596] Starting sentiment analysis (semantic dataset only)
+[2025-12-06T21:26:40.231604] Loading: data\reddit_data_semantic_clean.csv
+[2025-12-06T21:26:41.000674] Loaded 13408 rows
+[2025-12-06T21:27:10.918920] Saved sentiment file: data\reddit_data_sentiment.csv (13408 rows)
+[2025-12-06T21:27:10.918920] Sentiment analysis complete.
+[2025-12-06T21:27:10.919920] ============================================================
+[2025-12-06 14:27:11] Completed: data_sentiment.py
+[2025-12-06 14:27:11] --- Running Step: Indexing ---
+[2025-12-06 14:27:11] Starting script: store_index.py
+C:\Users\jonis\anaconda3\envs\reditbot\lib\site-packages\langchain_pinecone\__init__.py:3: LangChainDeprecationWarning: As of langchain-core 0.3.0, LangChain uses pydantic v2 internally. The langchain_core.pydantic_v1 module was a compatibility shim for pydantic v1, and should no longer be used. Please update the code to import from Pydantic directly.
+
+For example, replace imports like: `from langchain_core.pydantic_v1 import BaseModel`
+with: `from pydantic import BaseModel`
+or the v1 compatibility namespace if you are working in a code base that has not been fully upgraded to pydantic 2 yet. 	from pydantic.v1 import BaseModel
+
+  from langchain_pinecone.vectorstores import Pinecone, PineconeVectorStore
+=== Starting Pinecone Indexing ===
+Connected to Pinecone index: reddit-insights
+Rows in sentiment file: 13408
+Unindexed IDs in tracker DB: 9264
+Preparing 234 documents for indexing...
+Generated 441 chunks.
+Initializing OpenAI embeddings (text-embedding-3-small)...
+Uploading vectors to Pinecone...
+Upload complete — marking originals as indexed...
+Indexed 234 original documents.
+=== Pinecone indexing finished ===
+[2025-12-06 14:28:09] Completed: store_index.py
+[2025-12-06 14:28:09] Pipeline finished in 38.09 minutes.
+[2025-12-06 14:28:09] ================================================================================
+[2025-12-07 01:16:57] ================================================================================
+[2025-12-07 01:16:57] STARTING FULL PIPELINE
+[2025-12-07 01:16:57] ================================================================================
+[2025-12-07 01:16:57] --- Running Step: Data Collection ---
+[2025-12-07 01:16:57] Starting script: data_collection.py
+[2025-12-07 08:17:04] Starting Reddit scraper…
+[2025-12-07 08:17:04] Fetching r/sysadmin (Tech) attempt 1
+[2025-12-07 08:17:12]  r/sysadmin: 12 posts, 134 comments
+[2025-12-07 08:17:12] Fetching r/msp (Tech) attempt 1
+[2025-12-07 08:17:14]  r/msp: 1 posts, 5 comments
+[2025-12-07 08:17:14] Fetching r/talesfromtechsupport (Tech) attempt 1
+[2025-12-07 08:17:15] No new items for r/talesfromtechsupport
+[2025-12-07 08:17:15] Fetching r/iiiiiiitttttttttttt (Tech) attempt 1
+[2025-12-07 08:17:16] No new items for r/iiiiiiitttttttttttt
+[2025-12-07 08:17:16] Fetching r/techsupportgore (Tech) attempt 1
+[2025-12-07 08:17:18]  r/techsupportgore: 1 posts, 15 comments
+[2025-12-07 08:17:18] Fetching r/ITCareerQuestions (Tech) attempt 1
+[2025-12-07 08:17:21]  r/ITCareerQuestions: 6 posts, 42 comments
+[2025-12-07 08:17:21] Fetching r/netsec (Tech) attempt 1
+[2025-12-07 08:17:22]  r/netsec: 1 posts, 1 comments
+[2025-12-07 08:17:22] Fetching r/cybersecurity (Tech) attempt 1
+[2025-12-07 08:17:26]  r/cybersecurity: 11 posts, 88 comments
+[2025-12-07 08:17:26] Fetching r/technology (Tech) attempt 1
+[2025-12-07 08:17:30]  r/technology: 8 posts, 78 comments
+[2025-12-07 08:17:30] Fetching r/tech (Tech) attempt 1
+[2025-12-07 08:17:31] No new items for r/tech
+[2025-12-07 08:17:31] Fetching r/gadgets (Tech) attempt 1
+[2025-12-07 08:17:33]  r/gadgets: 2 posts, 30 comments
+[2025-12-07 08:17:33] Fetching r/apple (Tech) attempt 1
+[2025-12-07 08:17:35]  r/apple: 1 posts, 15 comments
+[2025-12-07 08:17:35] Fetching r/linux (Tech) attempt 1
+[2025-12-07 08:17:40]  r/linux: 11 posts, 82 comments
+[2025-12-07 08:17:40] Fetching r/Construction (Construction) attempt 1
+[2025-12-07 08:17:45]  r/Construction: 17 posts, 111 comments
+[2025-12-07 08:17:45] Fetching r/Contractors (Construction) attempt 1
+[2025-12-07 08:17:46] No new items for r/Contractors
+[2025-12-07 08:17:46] Fetching r/HomeImprovement (Construction) attempt 1
+[2025-12-07 08:18:00]  r/HomeImprovement: 64 posts, 258 comments
+[2025-12-07 08:18:00] Fetching r/DIY (Construction) attempt 1
+[2025-12-07 08:18:05]  r/DIY: 14 posts, 95 comments
+[2025-12-07 08:18:05] Fetching r/DIYChatRoom (Construction) attempt 1
+[2025-12-07 08:18:05] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 1/3
+[2025-12-07 08:18:08] Fetching r/DIYChatRoom (Construction) attempt 2
+[2025-12-07 08:18:08] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 2/3
+[2025-12-07 08:18:11] Fetching r/DIYChatRoom (Construction) attempt 3
+[2025-12-07 08:18:11] ERROR r/DIYChatRoom: Redirect to /subreddits/search — retry 3/3
+[2025-12-07 08:18:14] Fetching r/Electrical (Construction) attempt 1
+[2025-12-07 08:18:23]  r/Electrical: 32 posts, 136 comments
+[2025-12-07 08:18:23] Fetching r/Plumbing (Construction) attempt 1
+[2025-12-07 08:18:45]  r/Plumbing: 90 posts, 415 comments
+[2025-12-07 08:18:45] Fetching r/HVAC (Construction) attempt 1
+[2025-12-07 08:18:49]  r/HVAC: 7 posts, 39 comments
+[2025-12-07 08:18:49] Fetching r/AskEngineers (Construction) attempt 1
+[2025-12-07 08:18:52]  r/AskEngineers: 8 posts, 40 comments
+[2025-12-07 08:18:52] Fetching r/legaltech (Law) attempt 1
+[2025-12-07 08:18:53] No new items for r/legaltech
+[2025-12-07 08:18:53] Fetching r/LawFirm (Law) attempt 1
+[2025-12-07 08:18:55]  r/LawFirm: 1 posts, 0 comments
+[2025-12-07 08:18:55] Fetching r/Law (Law) attempt 1
+[2025-12-07 08:19:02]  r/Law: 14 posts, 124 comments
+[2025-12-07 08:19:02] Fetching r/LegalAdvice (Law) attempt 1
+[2025-12-07 08:19:21]  r/LegalAdvice: 100 posts, 250 comments
+[2025-12-07 08:19:21] Fetching r/LegalAdviceUK (Law) attempt 1
+[2025-12-07 08:19:29]  r/LegalAdviceUK: 33 posts, 184 comments
+[2025-12-07 08:19:29] Fetching r/LegalAdviceCanada (Law) attempt 1
+[2025-12-07 08:19:36]  r/LegalAdviceCanada: 22 posts, 143 comments
+[2025-12-07 08:19:36] Fetching r/Paralegal (Law) attempt 1
+[2025-12-07 08:19:38]  r/Paralegal: 8 posts, 26 comments
+[2025-12-07 08:19:38] Fetching r/LawSchool (Law) attempt 1
+[2025-12-07 08:19:45]  r/LawSchool: 28 posts, 143 comments
+[2025-12-07 08:19:45] Fetching r/LegalNews (Law) attempt 1
+[2025-12-07 08:19:48]  r/LegalNews: 7 posts, 5 comments
+[2025-12-07 08:19:51] ### DONE: 499 posts + 2459 comments added.
+[2025-12-07 08:19:51] Total records in dataset: 182086
+[2025-12-07 01:19:51] Completed: data_collection.py
+[2025-12-07 01:19:51] --- Running Step: Clean + Semantic ---
+[2025-12-07 01:19:51] Starting script: data_clean_and_classify.py
+[2025-12-07T08:20:09.626632] Week 6: start combined cleaning + semantic classification
+[2025-12-07T08:20:11.792016] Loaded raw rows: 182086
+[2025-12-07T08:20:11.857883] Dropped duplicates by id: 0
+[2025-12-07T08:24:15.821509] Baseline cleaned: 168434 rows -> data\reddit_data_clean.csv
+[2025-12-07T08:24:15.823515] Loading HuggingFace model: sentence-transformers/all-MiniLM-L6-v2
+[2025-12-07T08:24:18.301621] Prepared prototype embeddings for categories: ['Law', 'Construction', 'Tech', 'Productivity', 'CRM_Billing', 'Security_Others']
+[2025-12-07T08:24:18.410485] Computing embeddings for 168434 baseline rows...
+forrtl: error (200): program aborting due to window-CLOSE event
+Image              PC                Routine            Line        Source             
+KERNELBASE.dll     00007FFE581BC24D  Unknown               Unknown  Unknown
+KERNEL32.DLL       00007FFE59B0E8D7  Unknown               Unknown  Unknown
+ntdll.dll          00007FFE5B02C53C  Unknown               Unknown  Unknown

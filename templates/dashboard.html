@@ -1,0 +1,79 @@
+<!-- templates/dashboard.html -->
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Dashboard</h1>
+  <p class="muted">Dataset overview and recent pipeline activity.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Raw Data</h3>
+      <div id="raw-count">—</div>
+      <small id="raw-mod">—</small>
+    </div>
+
+    <div class="card">
+      <h3>Clean Data</h3>
+      <div id="clean-count">—</div>
+      <small id="clean-mod">—</small>
+    </div>
+
+    <div class="card">
+      <h3>Semantic Clean Data</h3>
+      <div id="semantic-count">—</div>
+      <small id="semantic-mod">—</small>
+    </div>
+
+    <div class="card">
+      <h3>Sentiment Data</h3>
+      <div id="sent-count">—</div>
+      <small id="sent-mod">—</small>
+    </div>
+
+    <div class="card">
+      <h3>Evaluation</h3>
+      <div id="eval-count">—</div>
+      <small id="eval-mod">—</small>
+    </div>
+  </div>
+
+  <h3>Recent Log Tail</h3>
+  <pre id="log-tail" class="logbox">Loading logs...</pre>
+
+  <div style="margin-top:18px;">
+    <button onclick="location.href='/pipeline'">Open Pipeline Tools</button>
+    <button onclick="location.href='/subreddits'">Edit Subreddits</button>
+    <button onclick="location.href='/chat'">Open Chatbot</button>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+async function loadDashboard() {
+  const res = await fetch("/api/dashboard");
+  if (!res.ok) return;
+
+  const j = await res.json();
+
+  function updateCard(prefix, obj) {
+    document.getElementById(prefix + "-count").innerText =
+      obj.exists ? obj.rows : "0";
+
+    document.getElementById(prefix + "-mod").innerText =
+      obj.modified ? ("Last modified: " + obj.modified) : "No file";
+  }
+
+  updateCard("raw", j.raw);
+  updateCard("clean", j.clean);
+  updateCard("semantic", j.semantic);
+  updateCard("sent", j.sentiment);
+  updateCard("eval", j.evaluation);
+
+  const tail = j.last_log_tail || [];
+  document.getElementById("log-tail").innerText = tail.join("");
+}
+
+window.addEventListener("load", loadDashboard);
+</script>
+{% endblock %}

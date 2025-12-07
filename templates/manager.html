@@ -1,0 +1,128 @@
+<!-- templates/manager.html -->
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Subreddit Manager</h1>
+  <p class="muted">Edit categories and subreddit lists. Changes save to <code>config/subreddits.json</code>.</p>
+
+  <div id="manager-area">
+    <div id="categories"></div>
+    <hr/>
+    <h3>Add new category</h3>
+    <input id="new-cat" placeholder="Category name" />
+    <button id="add-cat">Add Category</button>
+    <h3 style="margin-top:12px;">Add subreddit to category</h3>
+    <select id="sel-cat"></select>
+    <input id="new-sub" placeholder="subredditName (no r/)" />
+    <button id="add-sub">Add Subreddit</button>
+    <div style="margin-top:16px;">
+      <button id="save-btn">Save changes</button>
+      <span id="save-status" style="margin-left:10px"></span>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+  let currentCfg = {};
+
+  async function loadCfg() {
+    const res = await fetch("/api/subreddits");
+    currentCfg = await res.json();
+    render();
+  }
+
+  function render() {
+    const container = document.getElementById("categories");
+    container.innerHTML = "";
+    const sel = document.getElementById("sel-cat");
+    sel.innerHTML = "";
+    for (const [cat, subs] of Object.entries(currentCfg)) {
+      const card = document.createElement("div");
+      card.className = "card small";
+      const h = document.createElement("h4");
+      h.innerText = cat;
+      card.appendChild(h);
+      const ul = document.createElement("ul");
+      subs.forEach((s, idx) => {
+        const li = document.createElement("li");
+        li.innerText = s + " ";
+        const rem = document.createElement("button");
+        rem.innerText = "Remove";
+        rem.onclick = () => {
+          currentCfg[cat].splice(idx, 1);
+          render();
+        };
+        li.appendChild(rem);
+        ul.appendChild(li);
+      });
+      // allow renaming category
+      const rename = document.createElement("button");
+      rename.innerText = "Rename";
+      rename.onclick = () => {
+        const newName = prompt("New category name", cat);
+        if (newName && newName !== cat) {
+          currentCfg[newName] = currentCfg[cat];
+          delete currentCfg[cat];
+          render();
+        }
+      };
+      const delCat = document.createElement("button");
+      delCat.innerText = "Delete Category";
+      delCat.onclick = () => {
+        if (confirm("Delete category " + cat + " ?")) {
+          delete currentCfg[cat];
+          render();
+        }
+      };
+      card.appendChild(ul);
+      card.appendChild(rename);
+      card.appendChild(delCat);
+      container.appendChild(card);
+
+      const opt = document.createElement("option");
+      opt.value = cat;
+      opt.innerText = cat;
+      sel.appendChild(opt);
+    }
+  }
+
+  document.getElementById("add-cat").addEventListener("click", () => {
+    const v = document.getElementById("new-cat").value.trim();
+    if (!v) return alert("Enter category name");
+    if (currentCfg[v]) return alert("Category exists");
+    currentCfg[v] = [];
+    document.getElementById("new-cat").value = "";
+    render();
+  });
+
+  document.getElementById("add-sub").addEventListener("click", () => {
+    const cat = document.getElementById("sel-cat").value;
+    const sub = document.getElementById("new-sub").value.trim();
+    if (!cat) return alert("Select a category");
+    if (!sub) return alert("Enter subreddit");
+    if (!currentCfg[cat].includes(sub)) currentCfg[cat].push(sub);
+    document.getElementById("new-sub").value = "";
+    render();
+  });
+
+  document.getElementById("save-btn").addEventListener("click", async () => {
+    document.getElementById("save-status").innerText = "Saving...";
+    const res = await fetch("/api/subreddits", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify(currentCfg)
+    });
+    const j = await res.json();
+    if (res.ok) {
+      document.getElementById("save-status").innerText = "Saved.";
+    } else {
+      document.getElementById("save-status").innerText = "Error: " + (j.error || j.message);
+    }
+    setTimeout(()=>document.getElementById("save-status").innerText="", 3000);
+  });
+
+  window.addEventListener("load", loadCfg);
+</script>
+{% endblock %}

@@ -1,0 +1,149 @@
+<!-- templates/chatbot.html -->
+{% extends "base.html" %}
+{% block content %}
+<section class="panel">
+  <h1>Chatbot</h1>
+  <p class="muted">Ask questions about tools and pain points. Answers are retrieved from indexed Reddit excerpts.</p>
+
+  <div class="chat-container">
+    <div class="chat-window" id="chat-window">
+      <div class="message bot-message">
+        <div class="message-text">Hey there 👋 How can I help?</div>
+      </div>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <textarea id="chat-input" class="message-input" placeholder="Type your question..." required></textarea>
+      <div class="chat-controls">
+        <button type="submit" id="send-message" class="send-btn">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+//Basic Element Handles
+const chatWindow = document.getElementById("chat-window");
+const chatForm = document.getElementById("chat-form");
+const chatInput = document.getElementById("chat-input");
+const sendButton = document.getElementById("send-message");
+
+//Safe Markdown Renderer
+function renderMarkdown(md) {
+  if (!md) return "";
+
+  let html = md;
+
+  // Headings
+  html = html.replace(/^### (.*$)/gim, "<h3>$1</h3>");
+  html = html.replace(/^## (.*$)/gim, "<h2>$1</h2>");
+  html = html.replace(/^# (.*$)/gim, "<h1>$1</h1>");
+
+  // Bold
+  html = html.replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>");
+
+  // Bullet points
+  html = html.replace(/^- (.*)$/gim, "<li>$1</li>");
+  html = html.replace(/<li>([\s\S]*?)<\/li>/gim, "<ul><li>$1</li></ul>");
+
+  // Line breaks
+  html = html.replace(/\n/g, "<br>");
+
+  return html;
+}
+//Utilities
+function escapeHtml(text) {
+  if (!text) return "";
+  return text.replace(/[&<>"']/g, (m) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+  })[m]);
+}
+
+function appendMessage(content, className = "message user-message") {
+  const div = document.createElement("div");
+  div.className = className;
+
+  // Allow HTML for bot messages (markdown-rendered)
+  if (className.includes("bot-message")) {
+    div.innerHTML = `<div class="message-text">${content}</div>`;
+  } else {
+    // Escape user messages
+    div.innerHTML = `<div class="message-text">${escapeHtml(content)}</div>`;
+  }
+
+  chatWindow.appendChild(div);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
+}
+
+function showThinking() {
+  const t = `<div class="thinking-indicator">
+               <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+             </div>`;
+  appendMessage(t, "message bot-message thinking");
+  return document.querySelector(".message.bot-message.thinking");
+}
+
+//Main Send Handler
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const text = chatInput.value.trim();
+  if (!text) return;
+
+  appendMessage(text, "message user-message");
+  chatInput.value = "";
+
+  showThinking();
+
+  try {
+    const form = new URLSearchParams();
+    form.append("msg", text);
+
+    const res = await fetch("/get", { method: "POST", body: form });
+    const raw = await res.text();
+
+    const thinking = document.querySelector(".message.bot-message.thinking");
+    if (thinking) thinking.remove();
+
+    let answer = raw;
+
+    // If backend returned JSON { "answer": "..." }
+    try {
+      const parsed = JSON.parse(raw);
+      if (parsed && parsed.answer) answer = parsed.answer;
+    } catch (_) {}
+
+    // Render markdown cleanly
+    const formatted = renderMarkdown(answer);
+
+    appendMessage(formatted, "message bot-message");
+
+  } catch (err) {
+    const thinking = document.querySelector(".message.bot-message.thinking");
+    if (thinking) thinking.remove();
+
+    appendMessage("Error: unable to get response.", "message bot-message");
+    console.error(err);
+  }
+
+  return false;
+}
+
+//Attach events
+chatForm.addEventListener("submit", handleSubmit);
+
+chatInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !e.shiftKey) {
+    e.preventDefault();
+    chatForm.dispatchEvent(new Event("submit"));
+  }
+});
+
+sendButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  chatForm.dispatchEvent(new Event("submit"));
+});
+</script>
+{% endblock %}
