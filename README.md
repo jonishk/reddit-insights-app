@@ -1,4 +1,5 @@
 # Reddit Insights Chatbot with RAG
+## MSDS696 – Data Science Practicum II
 <p align="center">
   <img src="static/reddit_chatbot.png"/>
 </p>
@@ -138,6 +139,7 @@ Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+
 
 
 
