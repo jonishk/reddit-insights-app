@@ -12,22 +12,22 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 
 load_dotenv()
 
-# ------------------------- ENV -------------------------
+#ENV variables
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENAI_API_KEY   = os.getenv("OPENAI_API_KEY")
 INDEX_NAME       = os.getenv("PINECONE_INDEX_NAME", "reddit-insights")
 
-# ------------------------- FLASK ------------------------
+#FLASK Loading 
 app = Flask(__name__, static_folder="static", template_folder="templates")
 
-# ------------------------- DEFAULTS --------------------
+#DEFAULTS Values
 EVIDENCE_SCORE_THRESH = 0.12
 MIN_DOCS_FOR_CONFIDENCE = 3
 MAX_CONTEXT_CHARS = 8000
 RETRIEVER_K = 12
 SIM_SEARCH_K = 20
 
-# ------------------------- INIT -------------------------
+#INIT
 pc = None
 docsearch = None
 retriever = None
@@ -54,7 +54,7 @@ except Exception as e:
     llm = None
 
 
-# -------------------- UTILITIES ------------------------
+#UTILITIES
 def safe_truncate(text, max_chars):
     if not text:
         return ""
@@ -84,7 +84,7 @@ def build_context(docs):
     return ctx
 
 
-# ---------------- HYBRID RETRIEVAL ----------------------
+#HYBRID RETRIEVAL
 def hybrid_retrieve(query):
     if not docsearch:
         return []
@@ -125,7 +125,7 @@ def hybrid_retrieve(query):
     return final
 
 
-# ---------------- RAG GENERATION ------------------------
+#RAG GENERATION
 def rag_generate(query, doc_score_pairs):
 
     # greeting case
@@ -149,21 +149,28 @@ def rag_generate(query, doc_score_pairs):
     sub_list = ", ".join([s for s in subreddits if s]) or "unknown"
 
     system_prompt = f"""
-You are a helpful and precise research assistant. Use ONLY the Reddit excerpts in the Context.
+You are a helpful and precise research assistant. Your primary job is to answer 
+questions grounded strictly in the provided Reddit excerpts (the 'Context')
+However, if the user is simply greeting you (e.g., 'hi', 'hello', 'hey'), respond
+politely without requiring context — do NOT say you don't know.
+STRICT RULES:
+1) For informational questions: Use ONLY the provided context.
+2) If the context does *not* contain enough information to answer confidently, reply EXACTLY:
+    I don't know based on the provided Reddit data.\
+3) When answering with context, ALWAYS return the following structure:
 
-Rules:
-1. If context is insufficient, reply EXACTLY: "I don't know based on the provided Reddit data."
-2. Use the following structured format:
 
 ### Summary
 (2–6 line concise explanation)
 
 ### Key Points
-- Bullet list of tools, issues, and sentiments.
+- Bullet list of key tools, issues, or sentiments mentioned.
+- ALWAYS include sentiment for each item when available.
+
 
 ### Evidence Source
 - Subreddits: {sub_list}
-
+Produce clear, structured, factual responses.
 Context:
 {context}
 """
@@ -204,3 +211,4 @@ def chat():
 # --------------------- MAIN -----------------------------
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8080)))
+
