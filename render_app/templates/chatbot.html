@@ -1,74 +1,88 @@
-<!-- templates/chatbot.html -->
-{% extends "base.html" %}
-{% block content %}
-<section class="panel">
-  <h1>Chatbot</h1>
-  <p class="muted">Ask questions about tools and pain points. Answers are retrieved from indexed Reddit excerpts.</p>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Reddit Insights • Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
-  <div class="chat-container">
-    <div class="chat-window" id="chat-window">
-      <div class="message bot-message">
-        <div class="message-text">Hey there 👋 How can I help?</div>
-      </div>
-    </div>
-
-    <form id="chat-form" class="chat-form">
-      <textarea id="chat-input" class="message-input" placeholder="Type your question..." required></textarea>
-      <div class="chat-controls">
-        <button type="submit" id="send-message" class="send-btn">Send</button>
-      </div>
-    </form>
+<body>
+  <!-- NAVBAR -->
+  <div class="topnav">
+    <div class="brand">Reddit Insights Chatbot</div>
   </div>
-</section>
-{% endblock %}
 
-{% block scripts %}
+  <!-- MAIN CHAT PANEL -->
+  <main class="main-container">
+    <section class="panel">
+      <h1>Chatbot</h1>
+      <p class="muted">
+        Ask questions about tools, pain points, themes, or insights.<br>
+        Responses are retrieved from indexed Reddit discussions (RAG).
+      </p>
+
+      <div class="chat-container">
+
+        <!-- Chat window -->
+        <div class="chat-window" id="chat-window">
+          <div class="message bot-message">
+            <div class="message-text">Hey there 👋 How can I help?</div>
+          </div>
+        </div>
+
+        <!-- Message form -->
+        <form id="chat-form" class="chat-form">
+          <textarea id="chat-input" class="message-input"
+            placeholder="Type your question..." required></textarea>
+
+          <div class="chat-controls">
+            <button type="submit" id="send-message" class="send-btn">Send</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
 <script>
-// Elements
+// ---------------- CHATBOT SCRIPT ----------------
+
 const chatWindow = document.getElementById("chat-window");
 const chatForm = document.getElementById("chat-form");
 const chatInput = document.getElementById("chat-input");
 const sendButton = document.getElementById("send-message");
 
-// Append message (user or bot). content is assumed safe HTML for bot messages.
-function appendMessage(content, className = "message user-message", isHtml=false) {
+// Escape HTML but preserve Markdown
+function escapeHtml(text) {
+  if (!text) return "";
+  return text.replace(/[&<>]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[m]));
+}
+
+// Add text message
+function appendMessage(content, className = "message user-message") {
   const div = document.createElement("div");
   div.className = className;
-  const inner = document.createElement("div");
-  inner.className = "message-text";
-  if (isHtml) {
-    inner.innerHTML = content;
-  } else {
-    inner.textContent = content;
-  }
-  div.appendChild(inner);
+  div.innerHTML = `<div class="message-text">${content}</div>`;
   chatWindow.appendChild(div);
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// Show thinking indicator
+// Thinking bubble
 function showThinking() {
-  const div = document.createElement("div");
-  div.className = "message bot-message thinking";
-  div.innerHTML = `<div class="message-text"><div class="thinking-indicator"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;
-  chatWindow.appendChild(div);
-  chatWindow.scrollTop = chatWindow.scrollHeight;
-  return div;
+  const html = `
+    <div class="thinking-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>`;
+  appendMessage(html, "message bot-message thinking");
 }
 
-// Remove thinking indicator
-function removeThinking() {
-  const t = document.querySelector(".message.bot-message.thinking");
-  if (t) t.remove();
-}
+// SEND MESSAGE HANDLER
+async function sendMessage(e) {
+  e.preventDefault();
+  const text = chatInput.value.trim();
+  if (!text) return;
 
-// Submit handler
-async function handleSubmit(e) {
-  if (e && typeof e.preventDefault === "function") e.preventDefault();
-  const text = (chatInput.value||"").trim();
-  if (!text) return false;
-
-  appendMessage(text, "message user-message", false);
+  appendMessage(escapeHtml(text), "message user-message");
   chatInput.value = "";
   chatInput.style.height = "";
 
@@ -79,40 +93,32 @@ async function handleSubmit(e) {
     form.append("msg", text);
 
     const res = await fetch("/get", { method: "POST", body: form });
-    const replyHtml = await res.text();
+    const data = await res.json();     // <-- IMPORTANT: expecting {"answer": "text"}
 
-    removeThinking();
+    const thinking = document.querySelector(".thinking");
+    if (thinking) thinking.remove();
 
-    // If server returned plain text (like "I don't know...") it may not be HTML;
-    // we'll heuristically decide: if it contains HTML tags we render as HTML, otherwise render plain text.
-    const looksLikeHtml = /<[a-z][\s\S]*>/i.test(replyHtml);
-    if (looksLikeHtml) appendMessage(replyHtml, "message bot-message", true);
-    else appendMessage(replyHtml, "message bot-message", false);
+    appendMessage(escapeHtml(data.answer), "message bot-message");
+
   } catch (err) {
-    removeThinking();
-    appendMessage("Error: unable to get response.", "message bot-message", false);
+    const thinking = document.querySelector(".thinking");
+    if (thinking) thinking.remove();
+    appendMessage("Error contacting server.", "message bot-message");
     console.error(err);
   }
-  return false;
 }
 
-// Hook handlers
-chatForm.addEventListener("submit", handleSubmit);
+// Attach form submit
+chatForm.addEventListener("submit", sendMessage);
 
-// Enter sends (Shift+Enter newline)
-chatInput.addEventListener("keydown", function (e) {
+// Send on Enter
+chatInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
-    if (typeof chatForm.requestSubmit === "function") chatForm.requestSubmit();
-    else chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
+    chatForm.requestSubmit();
   }
 });
-
-// Top send button
-if (sendButton) sendButton.addEventListener("click", function (e) {
-  e.preventDefault();
-  if (typeof chatForm.requestSubmit === "function") chatForm.requestSubmit();
-  else chatForm.dispatchEvent(new Event("submit", { cancelable: true }));
-});
 </script>
-{% endblock %}
+
+</body>
+</html>
