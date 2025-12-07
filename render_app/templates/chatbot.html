@@ -17,12 +17,11 @@
     <section class="panel">
       <h1>Chatbot</h1>
       <p class="muted">
-        Ask questions about tools, pain points, themes, or insights.<br>
-        Responses are retrieved from indexed Reddit discussions (RAG).
+        Ask questions about tools, pain points, themes, or insights.  
+        Responses are retrieved from indexed Reddit discussions.
       </p>
 
       <div class="chat-container">
-
         <!-- Chat window -->
         <div class="chat-window" id="chat-window">
           <div class="message bot-message">
@@ -39,27 +38,24 @@
             <button type="submit" id="send-message" class="send-btn">Send</button>
           </div>
         </form>
-
       </div>
     </section>
   </main>
 
 <script>
-// ---------------- CHATBOT SCRIPT ----------------
-
 const chatWindow = document.getElementById("chat-window");
-const chatForm = document.getElementById("chat-form");
-const chatInput = document.getElementById("chat-input");
-const sendButton = document.getElementById("send-message");
+const chatForm   = document.getElementById("chat-form");
+const chatInput  = document.getElementById("chat-input");
 
-// Escape HTML but preserve Markdown
-function escapeHtml(text) {
-  if (!text) return "";
-  return text.replace(/[&<>]/g, m => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[m]));
+// escape HTML
+function escapeHtml(t) {
+  return t.replace(/[&<>"']/g, m => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
+  }[m]));
 }
 
-// Add text message
-function appendMessage(content, className = "message user-message") {
+// Add chat bubble
+function appendMessage(content, className) {
   const div = document.createElement("div");
   div.className = className;
   div.innerHTML = `<div class="message-text">${content}</div>`;
@@ -67,51 +63,53 @@ function appendMessage(content, className = "message user-message") {
   chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// Thinking bubble
+// Loading animation
 function showThinking() {
-  const html = `
-    <div class="thinking-indicator">
-      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-    </div>`;
-  appendMessage(html, "message bot-message thinking");
+  appendMessage(
+    `<div class="thinking-indicator">
+       <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+     </div>`,
+    "message bot-message thinking"
+  );
 }
 
-// SEND MESSAGE HANDLER
-async function sendMessage(e) {
+// MAIN SEND HANDLER
+chatForm.addEventListener("submit", async (e) => {
   e.preventDefault();
   const text = chatInput.value.trim();
   if (!text) return;
 
   appendMessage(escapeHtml(text), "message user-message");
   chatInput.value = "";
-  chatInput.style.height = "";
-
   showThinking();
 
   try {
     const form = new URLSearchParams();
     form.append("msg", text);
 
-    const res = await fetch("/get", { method: "POST", body: form });
-    const data = await res.json();     // <-- IMPORTANT: expecting {"answer": "text"}
+    const res = await fetch("/get", {
+      method: "POST",
+      body: form
+    });
 
+    const data = await res.json();  // <<--- IMPORTANT FIX (expect JSON)
+    const reply = data.answer || "I don't know based on the provided Reddit data.";
+
+    // Remove thinking indicator
     const thinking = document.querySelector(".thinking");
     if (thinking) thinking.remove();
 
-    appendMessage(escapeHtml(data.answer), "message bot-message");
-
+    appendMessage(reply, "message bot-message");
   } catch (err) {
     const thinking = document.querySelector(".thinking");
     if (thinking) thinking.remove();
-    appendMessage("Error contacting server.", "message bot-message");
+
+    appendMessage("Server error: unable to get response.", "message bot-message");
     console.error(err);
   }
-}
+});
 
-// Attach form submit
-chatForm.addEventListener("submit", sendMessage);
-
-// Send on Enter
+// ENTER to send
 chatInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     e.preventDefault();
