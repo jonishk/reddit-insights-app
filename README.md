@@ -117,6 +117,14 @@ This executes:
 3. data_sentiment.py
 
 4. store_index.py
+Estimated average run‑time per pipeline step (3 full runs)
+| Step                | Run 1 | Run 2 | Run 3 | **Average** |
+|---------------------|-------|-------|-------|-------------|
+| Data Collection     | 0.97 min | 7.53 min | 5.40 min | **4.6 min** |
+| Clean + Semantic    | 32.43 min| 28.87 min| 30.95 min| **30.8 min** |
+| Sentiment Analysis  | 0.38 min | 0.33 min | 0.78 min | **0.5 min** |
+| Indexing (Pinecone) | 0.22 min | 0.43 min | 0.97 min | **0.5 min** |
+| **Full pipeline**   | 33.99 min| 37.18 min| 38.09 min| **≈36.4 min** |
 
 ----------------------------------------------------------------------------------------------------
 ### Running the Local Chatbot
@@ -139,6 +147,7 @@ Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+
 
 
 
