@@ -74,10 +74,7 @@ project/
 
 # Installation & Setup
 
-## STEP 01- Clone the repository:
-
-Clone the repository
-
+### STEP 01- Clone the repository:
 ```bash
 git clone https://github.com/jonishk/reddit-insights-app.git
 cd reddit-insights-app
@@ -149,6 +146,7 @@ Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+
 
 
 
