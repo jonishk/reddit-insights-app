@@ -79,19 +79,11 @@ project/
 git clone https://github.com/jonishk/reddit-insights-app.git
 cd reddit-insights-app
 ```
-
-### STEP 02- Create and activate environment
-
+### STEP 02- Create and Prerequisites packages
 ```bash
-conda create -n reditbot python=3.10
-conda activate reditbot
-````
-
-### STEP 03- Install required packages
-```bash
-pip install -r requirements.txt
+conda env create -f environment.yml
 ```
-### STEP 04- Environment Variables (.env file)
+### STEP 03- Environment Variables (.env file)
 Create a .env file (not included in repo):
 ```bash
 OPENAI_API_KEY=your_key_here
@@ -146,7 +138,21 @@ Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+----------------------------------------------------------------------------------------------------
+## Quick start (Windows)
 
+1. Clone the repo: `git clone https://github.com/jonishk/reddit-insights-app.git`
+2. `cd reddit-insights-app`
+3. Create the conda environment: `conda env create -f environment.yml`
+4. Run the starter script: `start_app.bat`
+
+## Quick start (macOS / Linux)
+
+1. Clone the repo: `git clone https://github.com/jonishk/reddit-insights-app.git`
+2. `cd reddit-insights-app`
+3. Create the conda environment: `conda env create -f environment.yml`
+4. Make the script executable: `chmod +x start_app.sh`
+5. Run the starter script: `./start_app.sh`
 
 
 
