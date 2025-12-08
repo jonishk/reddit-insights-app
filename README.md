@@ -38,7 +38,8 @@ project/
 │   db.py
 │   logger_utils.py
 │   full_evaluation.ipynb
-│
+│   start_app.bat (Windows autostart)
+│   start_app.sh  (MacOS/Linux autostart)
 ├── config/
 │   ├── keywords.json
 │   ├── questions.json
@@ -153,6 +154,7 @@ https://reddit-insights-app.onrender.com/
 3. Create the conda environment: `conda env create -f environment.yml`
 4. Make the script executable: `chmod +x start_app.sh`
 5. Run the starter script: `./start_app.sh`
+
 
 
 
