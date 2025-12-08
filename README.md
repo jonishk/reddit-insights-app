@@ -117,7 +117,9 @@ This executes:
 3. data_sentiment.py
 
 4. store_index.py
+
 Estimated average run‑time per pipeline step (3 full runs)
+
 | Step                | Run 1 | Run 2 | Run 3 | **Average** |
 |---------------------|-------|-------|-------|-------------|
 | Data Collection     | 0.97 min | 7.53 min | 5.40 min | **4.6 min** |
@@ -147,6 +149,7 @@ Live Render version:
 ```bash
 https://reddit-insights-app.onrender.com/
 ```
+
 
 
 
