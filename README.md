@@ -118,6 +118,8 @@ Estimated average run‑time per pipeline step (3 full runs)
 | Indexing (Pinecone) | 0.22 min | 0.43 min | 0.97 min | **0.5 min** |
 | **Full pipeline**   | 33.99 min| 37.18 min| 38.09 min| **≈36.4 min** |
 
+We can schedule the full pipeline to run daily or weekly on Windows with Task Scheduler, or on macOS/Linux using launchd or cron. `run_pipeline.py` handles scraping, cleaning, classification, and Pinecone indexing in a single run.
+
 ----------------------------------------------------------------------------------------------------
 ### Running the Local Chatbot
 ```bash
@@ -154,6 +156,7 @@ https://reddit-insights-app.onrender.com/
 3. Create the conda environment: `conda env create -f environment.yml`
 4. Make the script executable: `chmod +x start_app.sh`
 5. Run the starter script: `./start_app.sh`
+
 
 
 
