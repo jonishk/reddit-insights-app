@@ -372,7 +372,7 @@ def api_dashboard():
         return {
             "exists": path.exists(),
             "rows": int(len(safe_read_csv(path))) if path.exists() else 0,
-            "modified": datetime.fromtimestamp(path.stat().st_mtime).isoformat() if path.exists() else None
+            "modified": datetime.fromtimestamp(path.stat().st_mtime).strftime("%Y-%m-%d %H:%M:%S") if path.exists() else None
         }
 
     tail = []
@@ -479,3 +479,4 @@ def chat():
 if __name__ == "__main__":
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     app.run(host="0.0.0.0", port=int(os.getenv("PORT", 8080)), debug=True)
+
