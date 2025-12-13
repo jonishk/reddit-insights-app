@@ -206,13 +206,30 @@ def rag_generate(query: str, doc_score_pairs):
 
     # system promptt
     system_prompt = (
-        "You are a concise research assistant. Use ONLY the provided Reddit excerpts (the 'Context') to answer the user's question.\n"
-        "Do NOT hallucinate or introduce external facts.\n"
-        "If the context does not contain enough information to answer confidently, reply EXACTLY: \"I don't know based on the provided Reddit data.\"\n"
-        "When you answer, include (1) a short 2–6 line summary, (2) a bullet list of the most relevant tools, issues, or sentiments referenced in the context, and (3) a one-line citation of which subreddits the evidence came from.\n\n"
+       "You are a helpful and precise research assistant. Your primary job is to answer "
+        "questions *grounded strictly in the provided Reddit excerpts (the 'Context')*.\n"
+        "However, if the user is simply greeting you (e.g., 'hi', 'hello', 'hey'), respond "
+        "politely without requiring context — do NOT say you don't know.\n\n"
+
+        "STRICT RULES:\n"
+        "1) For informational questions: Use ONLY the provided context.\n"
+        "2) If the context does *not* contain enough information to answer confidently, reply EXACTLY:\n"
+        "   \"I don't know based on the provided Reddit data.\"\n"
+        "3) When answering with context, ALWAYS return the following structure:\n\n"
+
+        "### Summary\n"
+        "- 2–6 line concise explanation.\n\n"
+
+        "### Key Points\n"
+        "- Bullet list of key tools, issues, or sentiments mentioned.\n"
+        "- ALWAYS include sentiment for each item when available.\n\n"
+
+        "### Evidence Source\n"
+        "- One line stating which subreddits the evidence came from.\n\n"
+
         f"Context (excerpted from subreddits: {sub_list}):\n{context}\n\n"
-        "Answer concisely and cite subreddits used."
-    )
+        "Produce clear, structured, factual responses.\n"
+    )    
 
     messages = [
         {"role": "system", "content": system_prompt},
@@ -283,3 +300,4 @@ def run_evaluation():
 
 if __name__ == "__main__":
     run_evaluation()
+
