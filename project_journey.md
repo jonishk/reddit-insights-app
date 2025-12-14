@@ -87,30 +87,26 @@ This week didn’t involve much new coding, but it was crucial for making the pr
 
 ## Major Issues & How I Solved Them
 Throughout the project I ran into several roadblocks, and these ended up teaching me the most.
-1. Too many irrelevant posts
+1. **Too many irrelevant posts**
 
-Most Reddit posts had nothing to do with software tools.
-I solved this by adding embedding-based semantic categorization before sentiment and indexing. This reduced noise massively.
+Most Reddit posts had nothing to do with software tools. I solved this by adding embedding-based semantic categorization before sentiment and indexing. This reduced noise massively.
 
-2. Pinecone instability
+2. **Pinecone instability**
 
-Sometimes the index failed to connect or had missing vectors.
-I rewrote the indexing script with safer upsert behavior and fewer assumptions about the index state.
+Sometimes the index failed to connect or had missing vectors. I rewrote the indexing script with safer upsert behavior and fewer assumptions about the index state.
 
-3. RAG hallucinations
+3. **RAG hallucinations**
 
-The chatbot would confidently answer questions that had no ground truth in context.
-I enforced strict grounding rules and rebuilt the system prompt so it must answer “I don’t know…” when evidence is weak.
+The chatbot would confidently answer questions that had no ground truth in context. I enforced strict grounding rules and rebuilt the system prompt so it must answer “I don’t know…” when evidence is weak.
 
-4. High API cost
+4. **High API cost**
 
 Using HuggingFace models locally was slow, and OpenAI embeddings across 190k rows was too expensive.
 I solved this by filtering the dataset first, then embedding only the refined rows.
 
-5. Render deployment differences
+5. **Render deployment differences**
 
-Render behaves differently from local development.
-I had to build a minimized version of the app for Render that still used the exact same RAG logic but avoided heavy pipeline tasks.
+Render behaves differently from local development. I had to build a minimized version of the app for Render that still used the exact same RAG logic but avoided heavy pipeline tasks.
 
 ---
 
@@ -155,6 +151,7 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
 
 
