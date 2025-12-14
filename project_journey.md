@@ -133,7 +133,7 @@ Thank you for checking out my work!
 
 ## Visual Summary
 
-> **Reddit Discussions → Data Pipeline → Sentiment Analysis → RAG Chatbot → Insights**
+> **Dashboard and recent pipeline overview**
 
 <p align="center">
   <img src="static/dashboard_screen.png" width="500" alt="Chatbot Interface Screenshot"/>
@@ -148,6 +148,7 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
 
 
