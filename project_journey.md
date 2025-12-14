@@ -70,6 +70,7 @@ Most of the work this week was spent fixing things that were “almost correct.�
 This week made me appreciate how much fine-tuning matters for RAG systems.
 
 8. Week 8 — Final Cleanup, Documentation, and Demo Prep
+
 The last week was all about wrapping things up—writing documentation, cleaning the repo, structuring instructions, and generating analysis reports. I also produced the profiling report for the datasets and spent time improving the UI so that both the local and cloud versions looked consistent.
 
 I added stronger formatting logic so the chatbot returns readable structured answers. I also wrote the README and organized all the code folders to match what a real-world project should look like.
@@ -146,4 +147,5 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
