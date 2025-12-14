@@ -104,6 +104,7 @@ I solved this by filtering the dataset first, then embedding only the refined ro
 
 Render behaves differently from local development.
 I had to build a minimized version of the app for Render that still used the exact same RAG logic but avoided heavy pipeline tasks.
+
 ---
 
 ## What I Learned Through the Process
@@ -147,6 +148,7 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
 
 
