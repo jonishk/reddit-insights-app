@@ -11,7 +11,6 @@ I used this space to keep track of what I learned, why I made certain decisions,
 This practicum project **Reddit Insights Chatbot with RAG** ended up being very different from what I expected when I started Week 1. What follows is a week-by-week walkthrough of what I did, why I made certain decisions, and what problems I ran into. I tried to write this the same way I would explain it to someone casually during office hours: straightforward, honest, and from my own perspective as the student building this system.
 1. Week 1 — Finalizing the Project Idea
 During the first week, my main goal was to crystalize what I was actually going to build. I already had a working RAG chatbot from Practicum I, but it was basically a prototype with a lot of rough edges. The idea this time was to turn it into a real automated system that could continuously collect Reddit data, clean it, classify it, index it, and generate high-quality RAG-based answers.
-
 I drafted the proposal, and the biggest decision I made here was to keep the same industries **Law, Construction, and Tech** but rebuild the whole pipeline so it was cleaner and scalable. This provided a clear direction for the rest of the project.
 
 2. Week 2 — Data Collection Automation
@@ -147,3 +146,4 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
