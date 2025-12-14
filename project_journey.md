@@ -74,8 +74,8 @@ This week made me appreciate how much fine-tuning matters for RAG systems.
 The last week was all about wrapping things up—writing documentation, cleaning the repo, structuring instructions, and generating analysis reports. I also produced the profiling report for the datasets and spent time improving the UI so that both the local and cloud versions looked consistent.
 
 I added stronger formatting logic so the chatbot returns readable structured answers. I also wrote the README and organized all the code folders to match what a real-world project should look like.
-
 This week didn’t involve much new coding, but it was crucial for making the project something I would feel comfortable showing to others.
+
 ---
 
 ## Major Issues & How I Solved Them
@@ -147,5 +147,6 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
 
