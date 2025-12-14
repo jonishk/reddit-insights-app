@@ -14,7 +14,7 @@ This practicum project **Reddit Insights Chatbot with RAG** ended up being very 
 During the first week, my main goal was to crystalize what I was actually going to build. I already had a working RAG chatbot from Practicum I, but it was basically a prototype with a lot of rough edges. The idea this time was to turn it into a real automated system that could continuously collect Reddit data, clean it, classify it, index it, and generate high-quality RAG-based answers.
 I drafted the proposal, and the biggest decision I made here was to keep the same industries **Law, Construction, and Tech** but rebuild the whole pipeline so it was cleaner and scalable. This provided a clear direction for the rest of the project.
 
-3. Week 2 — Data Collection Automation
+2. **Week 2 — Data Collection Automation**
 
 This week was all about rewriting the data collection script. My old scraper wasn’t reliable and didn't handle errors, so I focused on:
 - making the script restart-safe,
@@ -23,7 +23,7 @@ This week was all about rewriting the data collection script. My old scraper was
 
 I also switched to a structure where subreddit lists came from `config/subreddits.json`, which made the tool more flexible. By the end of the week, I had a much more trustworthy data-collection step.
 
-3. Week 3 — Incremental Indexing + Cron-Style Automation
+3. **Week 3 — Incremental Indexing + Cron-Style Automation**
 
 I realized that reprocessing 100k+ Reddit posts every time was too expensive in terms of time and OpenAI usage. So this week, I built an incremental tracking system using a small SQLite DB.
 
@@ -34,18 +34,18 @@ The pipeline now knew:
 
 It reduced unnecessary processing and made the system feel more like something that could actually run periodically (like once a week) without breaking.
 
-4. Week 4 — Subreddit Manager UI
+4. **Week 4 — Subreddit Manager UI**
 
 This ended up taking more time than I thought. I built a browser-based UI where I could add, remove, or rename subreddits without touching the code.
 
 This also helped me understand more clearly how messy real-world input pipelines can get. It seems small, but this part taught me about user-centered design—something I didn’t think much about before.
 
-5. Week 5 — Deploying to the Cloud
+5. **Week 5 — Deploying to the Cloud**
 
 Getting the chatbot online was more challenging than expected. Environment variables, Pinecone initialization, and template handling all required changes.
 But once it worked, the whole project felt real and something I could actually show MSP Shift or anyone else.
 
-7. Week 6 — Major RAG Retrieval Improvements
+6. **Week 6 — Major RAG Retrieval Improvements**
    
 This week changed everything.
 I discovered that more than 90% of the scraped Reddit posts were irrelevant, even after cleaning.
@@ -61,7 +61,7 @@ This was also the week I rewrote the retrieval logic:
 - switched from HuggingFace embeddings → OpenAI text-embedding-3-small
 This was the biggest jump in answer quality and reduced hallucinations drastically.
 
-7. Week 7 — Evaluation and Fine-Tuning
+7. **Week 7 — Evaluation and Fine-Tuning**
 
 During Week 7, I focused entirely on evaluating the improvements. I built:
 - the `evaluate.py` script,
@@ -76,7 +76,7 @@ Most of the work this week was spent fixing things that were “almost correct.�
 
 This week made me appreciate how much fine-tuning matters for RAG systems.
 
-8. Week 8 — Final Cleanup, Documentation, and Demo Prep
+8. **Week 8 — Final Cleanup, Documentation, and Demo Prep**
 
 The last week was all about wrapping things up—writing documentation, cleaning the repo, structuring instructions, and generating analysis reports. I also produced the profiling report for the datasets and spent time improving the UI so that both the local and cloud versions looked consistent.
 
@@ -155,6 +155,7 @@ Thank you for checking out my work!
 - **LangChain**, **Pinecone**, **HuggingFace**, and **OpenAI**, for the powerful open-source tools that made this project possible  
 
 ---
+
 
 
 
